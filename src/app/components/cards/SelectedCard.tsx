@@ -14,7 +14,7 @@ const SelectedCard = () => {
     <Card sx={{ maxWidth: 500, m: 2 }}>
       <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
-          sx={{ maxWidth: 140 }}
+          sx={{ maxWidth: 140, m: 1, borderRadius: 2 }}
           component="img"
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
           alt="green iguana"
