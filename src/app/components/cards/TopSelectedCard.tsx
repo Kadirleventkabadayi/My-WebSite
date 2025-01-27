@@ -20,7 +20,6 @@ function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
   return (
     <Card
       sx={{
-        maxWidth: 500,
         m: 2,
         ...cardSx,
       }}
@@ -29,7 +28,7 @@ function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
         <CardMedia
           sx={{
             width: "100%",
-            height: 550,
+            height: "80vh",
             borderRadius: 1,
           }}
           component="img"
@@ -45,7 +44,7 @@ function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
             width: "100%",
             height: "100%",
             background:
-              "linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0))",
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.76234243697479)3%, rgba(0,0,0,0) 100%)",
             padding: 2,
             justifyContent: "flex-end",
           }}
