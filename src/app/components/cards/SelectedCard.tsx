@@ -8,13 +8,20 @@ import {
   Divider,
   Typography,
 } from "@mui/material";
+import { SxProps, Theme } from "@mui/system";
 
-const SelectedCard = () => {
+interface SelectedCardProps {
+  cardSx?: SxProps<Theme>;
+  cardType?: string;
+  title: string;
+}
+
+const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
   return (
     <Card sx={{ maxWidth: 500, m: 2 }}>
       <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
-          sx={{ maxWidth: 140, m: 1, borderRadius: 2 }}
+          sx={{ maxWidth: 140, m: 1, borderRadius: 1, ...cardSx }}
           component="img"
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
           alt="green iguana"
@@ -27,16 +34,17 @@ const SelectedCard = () => {
             variant="h5"
             component="div"
             sx={{
-              width: "fit-content",
-              backgroundColor: "#c039a3",
+              width: "25%",
+              backgroundColor: cardType || "orange",
               p: 0.5,
-              borderRadius: 2,
+              borderRadius: 1,
               color: "white",
               fontWeight: "bold",
-              fontSize: "1rem",
+              fontSize: "0.8rem",
+              textAlign: "center",
             }}
           >
-            Levent
+            {title.toUpperCase()}
           </Typography>
           <Typography
             variant="body2"
