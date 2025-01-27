@@ -18,7 +18,14 @@ interface SelectedCardProps {
 
 const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
   return (
-    <Card sx={{ maxWidth: 500, m: 2 }}>
+    <Card
+      sx={{
+        maxWidth: 500,
+        m: 2,
+        backgroundColor: "var(--background)",
+        ...cardSx,
+      }}
+    >
       <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
           sx={{ maxWidth: 140, m: 1, borderRadius: 1, ...cardSx }}
@@ -50,7 +57,7 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
             variant="body2"
             sx={{
               height: "40%",
-              color: "text.secondary",
+              color: "var(--foreground)",
               overflow: "hidden",
               textOverflow: "ellipsis",
               fontWeight: "bold",
@@ -71,7 +78,7 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
             />
             <Typography
               variant="body2"
-              color="text.secondary"
+              color="var(--foreground)"
               sx={{ fontWeight: "bold" }}
             >
               Kadir Levent
@@ -79,7 +86,7 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
             <Divider sx={{ marginInline: 1 }} orientation="vertical" flexItem />
             <Typography
               variant="body2"
-              color="text.secondary"
+              color="var(--foreground)"
               sx={{ fontWeight: "bold", color: "gray" }}
             >
               Last updated 3 mins ago
