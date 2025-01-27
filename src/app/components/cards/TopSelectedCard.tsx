@@ -10,37 +10,58 @@ import {
 } from "@mui/material";
 import { SxProps, Theme } from "@mui/system";
 
-interface SelectedCardProps {
+interface TopSelectedCardProps {
   cardSx?: SxProps<Theme>;
   cardType?: string;
   title: string;
 }
 
-const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
+function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
   return (
-    <Card sx={{ maxWidth: 500, m: 2 }}>
+    <Card
+      sx={{
+        maxWidth: 500,
+        m: 2,
+        ...cardSx,
+      }}
+    >
       <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
-          sx={{ maxWidth: 140, m: 1, borderRadius: 1, ...cardSx }}
+          sx={{
+            width: "100%",
+            height: 550,
+            borderRadius: 1,
+          }}
           component="img"
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
-          alt="green iguana"
+          alt="Levent"
         />
+
         <CardContent
-          sx={{ height: 160, display: "flex", flexDirection: "column" }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            background:
+              "linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0))",
+            padding: 2,
+            justifyContent: "flex-end",
+          }}
         >
           <Typography
             gutterBottom
             variant="h5"
             component="div"
             sx={{
-              width: "25%",
               backgroundColor: cardType || "orange",
               p: 0.5,
               borderRadius: 1,
               color: "white",
               fontWeight: "bold",
-              fontSize: "0.8rem",
+              fontSize: "1rem",
+              width: "25%",
               textAlign: "center",
             }}
           >
@@ -49,22 +70,18 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
           <Typography
             variant="body2"
             sx={{
-              height: "40%",
-              color: "text.secondary",
               overflow: "hidden",
               textOverflow: "ellipsis",
+              color: "white",
               fontWeight: "bold",
               fontSize: "1.2rem",
               mt: 1,
             }}
           >
             Levent is the best developer in the world. Because he is the best.
-            For these reasons, he is the best.
           </Typography>
 
-          <Box
-            sx={{ display: "flex", alignItems: "center", marginTop: "auto" }}
-          >
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <Avatar
               sx={{ width: 24, height: 24, marginRight: 1 }}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
@@ -72,15 +89,19 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
             <Typography
               variant="body2"
               color="text.secondary"
-              sx={{ fontWeight: "bold" }}
+              sx={{ color: "white", fontWeight: "bold" }}
             >
               Kadir Levent
             </Typography>
-            <Divider sx={{ marginInline: 1 }} orientation="vertical" flexItem />
+            <Divider
+              sx={{ marginInline: 1, color: "white", borderColor: "white" }}
+              orientation="vertical"
+              flexItem
+            />
             <Typography
               variant="body2"
               color="text.secondary"
-              sx={{ fontWeight: "bold", color: "gray" }}
+              sx={{ color: "white", fontWeight: "bold" }}
             >
               Last updated 3 mins ago
             </Typography>
@@ -89,6 +110,6 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
       </CardActionArea>
     </Card>
   );
-};
+}
 
-export default SelectedCard;
+export default TopSelectedCard;
