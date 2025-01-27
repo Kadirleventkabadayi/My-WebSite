@@ -70,7 +70,11 @@ function TopSelectedCard() {
             >
               Kadir Levent
             </Typography>
-            <Divider sx={{ marginInline: 1 }} orientation="vertical" flexItem />
+            <Divider
+              sx={{ marginInline: 1, color: "white", borderColor: "white" }}
+              orientation="vertical"
+              flexItem
+            />
             <Typography
               variant="body2"
               color="text.secondary"

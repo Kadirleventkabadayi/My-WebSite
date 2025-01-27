@@ -20,7 +20,7 @@ const SelectedCard = () => {
           alt="green iguana"
         />
         <CardContent
-          sx={{ height: 140, display: "flex", flexDirection: "column" }}
+          sx={{ height: 160, display: "flex", flexDirection: "column" }}
         >
           <Typography
             gutterBottom
@@ -29,9 +29,11 @@ const SelectedCard = () => {
             sx={{
               width: "fit-content",
               backgroundColor: "#c039a3",
-              p: 0.3,
+              p: 0.5,
               borderRadius: 2,
               color: "white",
+              fontWeight: "bold",
+              fontSize: "1rem",
             }}
           >
             Levent
@@ -39,9 +41,13 @@ const SelectedCard = () => {
           <Typography
             variant="body2"
             sx={{
+              height: "40%",
               color: "text.secondary",
               overflow: "hidden",
               textOverflow: "ellipsis",
+              fontWeight: "bold",
+              fontSize: "1.2rem",
+              mt: 1,
             }}
           >
             Levent is the best developer in the world. Because he is the best.
@@ -55,11 +61,19 @@ const SelectedCard = () => {
               sx={{ width: 24, height: 24, marginRight: 1 }}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
             />
-            <Typography variant="body2" color="text.secondary">
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ fontWeight: "bold" }}
+            >
               Kadir Levent
             </Typography>
             <Divider sx={{ marginInline: 1 }} orientation="vertical" flexItem />
-            <Typography variant="body2" color="text.secondary">
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ fontWeight: "bold", color: "gray" }}
+            >
               Last updated 3 mins ago
             </Typography>
           </Box>
