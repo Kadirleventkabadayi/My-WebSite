@@ -9,8 +9,9 @@ function TopArea() {
   return (
     <Box
       sx={{
-        display: "grid",
-        gridTemplateColumns: "1fr 3fr",
+        alignItems: "center",
+        justifyContent: "center",
+        display: "flex",
         gap: 2,
         backgroundColor: "var(--topArea)",
       }}
@@ -21,6 +22,7 @@ function TopArea() {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
+          width: "40%",
         }}
       >
         {DUMMY_DATA.map((item) => (

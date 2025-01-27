@@ -3,7 +3,7 @@ import TopArea from "./components/areas/TopArea";
 
 export default function Home() {
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
+    <Box>
       <TopArea />
     </Box>
   );
