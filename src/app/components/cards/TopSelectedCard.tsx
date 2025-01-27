@@ -20,7 +20,6 @@ function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
   return (
     <Card
       sx={{
-        maxWidth: 500,
         m: 2,
         ...cardSx,
       }}
@@ -29,7 +28,7 @@ function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
         <CardMedia
           sx={{
             width: "100%",
-            height: 550,
+            height: "80vh",
             borderRadius: 1,
           }}
           component="img"

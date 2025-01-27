@@ -20,22 +20,27 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
   return (
     <Card
       sx={{
-        maxWidth: 500,
-        m: 2,
+        maxWidth: 700,
+
+        height: "25vh",
         backgroundColor: "var(--background)",
         ...cardSx,
       }}
     >
       <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
-          sx={{ maxWidth: 140, m: 1, borderRadius: 1, ...cardSx }}
+          sx={{
+            height: "25vh",
+            width: "25vh",
+            p: 1,
+            borderRadius: 3,
+            ...cardSx,
+          }}
           component="img"
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
           alt="green iguana"
         />
-        <CardContent
-          sx={{ height: 160, display: "flex", flexDirection: "column" }}
-        >
+        <CardContent sx={{ display: "flex", flexDirection: "column" }}>
           <Typography
             gutterBottom
             variant="h5"
@@ -83,7 +88,11 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
             >
               Kadir Levent
             </Typography>
-            <Divider sx={{ marginInline: 1 }} orientation="vertical" flexItem />
+            <Divider
+              sx={{ marginInline: 1, borderColor: "var(--foreground)" }}
+              orientation="vertical"
+              flexItem
+            />
             <Typography
               variant="body2"
               color="var(--foreground)"

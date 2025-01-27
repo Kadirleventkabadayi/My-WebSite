@@ -14,15 +14,16 @@ function TopArea() {
         display: "flex",
         gap: 2,
         backgroundColor: "var(--topArea)",
+        height: "95vh",
       }}
     >
       <TopSelectedCard title="GADGET" cardType={getColorByString("GADGET")} />
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-between",
           flexDirection: "column",
-          width: "40%",
+          height: "80vh",
         }}
       >
         {DUMMY_DATA.map((item) => (
