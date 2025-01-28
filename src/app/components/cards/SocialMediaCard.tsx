@@ -7,11 +7,9 @@ const SocialMediaCard: React.FC = () => {
   return (
     <Card
       sx={{
-        width: "22vw",
+        width: "65vw",
         margin: "auto",
         marginTop: 5,
-        position: "absolute",
-        right: "15%",
         bgcolor: "var(--socialMediaCard)",
       }}
     >
@@ -24,11 +22,19 @@ const SocialMediaCard: React.FC = () => {
             fontWeight: "bold",
             fontSize: "2rem",
             color: "var(--foreground)",
+            textAlign: "center",
           }}
         >
           Social Networks
         </Typography>
-        <Box display="grid" gridTemplateColumns="1fr 1fr" gap={2}>
+        <Box
+          gap={2}
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+          }}
+        >
           <SocialMediaBtn
             icon={Twitter}
             name="Twitter"
