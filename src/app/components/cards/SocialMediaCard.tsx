@@ -9,7 +9,6 @@ const SocialMediaCard: React.FC = () => {
       sx={{
         width: "65vw",
         margin: "auto",
-        marginTop: 5,
         bgcolor: "var(--socialMediaCard)",
       }}
     >
