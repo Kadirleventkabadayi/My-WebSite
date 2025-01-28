@@ -42,7 +42,7 @@ const Footer = () => {
           sx={{ mt: 2, color: "var(--footerString2)" }}
         >
           {"Copyright © "}
-          <Link href="/">Your Website</Link> {new Date().getFullYear()}
+          <Link href="/">My Website</Link> {new Date().getFullYear()}
           {"."}
         </Typography>
       </Container>
