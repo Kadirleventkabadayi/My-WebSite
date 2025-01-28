@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         topArea: "var(--topArea)",
         categoryArea: "var(--categoryArea)",
+        socialMedia: "var(--socialMedia)",
       },
     },
   },
