@@ -34,13 +34,29 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
             bottom: 0,
             backgroundColor: "rgba(0, 0, 0, 0.5)",
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-end",
             justifyContent: "center",
           }}
         >
-          <Typography variant="h5" component="div">
+          <Box
+            sx={{
+              width: "10%",
+              border: "white solid 1px",
+              mb: "5%",
+              marginInline: "2%",
+            }}
+          />
+          <Typography variant="h5" component="div" sx={{ color: "white" }}>
             {title}
           </Typography>
+          <Box
+            sx={{
+              width: "10%",
+              border: "white solid 1px",
+              mb: "5%",
+              marginInline: "2%",
+            }}
+          />
         </CardContent>
       </Card>
       <Modal open={open} onClose={handleClose}>

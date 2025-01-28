@@ -85,7 +85,7 @@ const TopCategories: React.FC = () => {
         <IconButton
           onClick={handleScrollLeft}
           sx={{
-            bgcolor: "var(--foreground)",
+            bgcolor: "white",
           }}
         >
           <ArrowBack />
@@ -93,7 +93,7 @@ const TopCategories: React.FC = () => {
         <IconButton
           onClick={handleScrollRight}
           sx={{
-            bgcolor: "var(--foreground)",
+            bgcolor: "white",
           }}
         >
           <ArrowForward />
