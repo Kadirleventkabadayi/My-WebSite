@@ -1,3 +1,4 @@
+import { timeAgo } from "@/app/lib/utils";
 import {
   Avatar,
   Box,
@@ -14,11 +15,22 @@ interface TopSelectedCardProps {
   cardSx?: SxProps<Theme>;
   cardType?: string;
   title: string;
+  description?: string;
+  updated_at: string;
+  repoUrl: string;
 }
 
-function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
+function TopSelectedCard({
+  cardSx,
+  cardType,
+  title,
+  description,
+  updated_at,
+  repoUrl,
+}: TopSelectedCardProps) {
   return (
     <Card
+      onClick={() => window.open(repoUrl)}
       sx={{
         m: 2,
         ...cardSx,
@@ -77,7 +89,7 @@ function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
               mt: 1,
             }}
           >
-            Levent is the best developer in the world. Because he is the best.
+            {description}
           </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -102,7 +114,7 @@ function TopSelectedCard({ cardSx, cardType, title }: TopSelectedCardProps) {
               color="text.secondary"
               sx={{ color: "white", fontWeight: "bold" }}
             >
-              Last updated 3 mins ago
+              {timeAgo(updated_at)}
             </Typography>
           </Box>
         </CardContent>
