@@ -7,6 +7,7 @@ const SocialMediaCard: React.FC = () => {
   return (
     <Card
       sx={{
+        paddingBlock: "2%",
         width: "65vw",
         margin: "auto",
         bgcolor: "var(--socialMediaCard)",
@@ -22,16 +23,20 @@ const SocialMediaCard: React.FC = () => {
             fontSize: "2rem",
             color: "var(--foreground)",
             textAlign: "center",
+            paddingBottom: "10%",
+            textDecoration: "underline",
           }}
         >
           Social Networks
         </Typography>
+
         <Box
           gap={2}
           sx={{
             display: "flex",
             width: "100%",
             justifyContent: "center",
+            paddingBottom: "5%",
           }}
         >
           <SocialMediaBtn
