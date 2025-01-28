@@ -12,6 +12,7 @@ const SocialMediaCard: React.FC = () => {
         marginTop: 5,
         position: "absolute",
         right: "15%",
+        bgcolor: "var(--socialMediaCard)",
       }}
     >
       <CardContent>
@@ -19,7 +20,11 @@ const SocialMediaCard: React.FC = () => {
           variant="h5"
           component="div"
           gutterBottom
-          sx={{ fontWeight: "bold", fontSize: "2rem" }}
+          sx={{
+            fontWeight: "bold",
+            fontSize: "2rem",
+            color: "var(--foreground)",
+          }}
         >
           Social Networks
         </Typography>
