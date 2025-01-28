@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <Box>
       <TopArea />
-      <TopCategories />
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <TopCategories />
+      </Box>
     </Box>
   );
 }

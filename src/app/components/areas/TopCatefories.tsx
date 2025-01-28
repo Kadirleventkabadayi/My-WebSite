@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
+import CategoryCard from "../cards/CategoryCard";
+import { ArrowForward, ArrowBack } from "@mui/icons-material";
+import { useRef } from "react";
 
 const categories = [
   {
@@ -24,26 +26,107 @@ const categories = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
   },
+  {
+    title: "Finance",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+  },
+  {
+    title: "Travel",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+  },
 ];
 
 const TopCategories: React.FC = () => {
-  const [open, setOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<{
-    title: string;
-    image: string;
-  } | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const handleOpen = (category: { title: string; image: string }) => {
-    setSelectedCategory(category);
-    setOpen(true);
+  // Scroll left
+  const handleScrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    }
   };
 
-  const handleClose = () => {
-    setOpen(false);
-    setSelectedCategory(null);
+  // Scroll right
+  const handleScrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    }
   };
 
-  return <Box sx={{ p: 2 }}></Box>;
+  return (
+    <Box
+      sx={{
+        position: "relative",
+        maxWidth: "67vw",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "16px",
+      }}
+    >
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          padding: "2%",
+          gap: 2,
+        }}
+      >
+        <IconButton
+          onClick={handleScrollLeft}
+          sx={{
+            bgcolor: "var(--foreground)",
+          }}
+        >
+          <ArrowBack />
+        </IconButton>
+        <IconButton
+          onClick={handleScrollRight}
+          sx={{
+            bgcolor: "var(--foreground)",
+          }}
+        >
+          <ArrowForward />
+        </IconButton>
+      </Box>
+
+      <Box
+        ref={scrollContainerRef}
+        sx={{
+          overflowX: "auto",
+          WebkitOverflowScrolling: "touch",
+          "&::-webkit-scrollbar": { display: "none" },
+          display: "flex",
+          gap: 3,
+          padding: "16px",
+          scrollBehavior: "smooth",
+          width: "100%",
+        }}
+      >
+        {categories.map((category, index) => (
+          <Box
+            key={index}
+            sx={{
+              flex: "0 0 auto",
+              width: "15vw",
+            }}
+          >
+            <CategoryCard image={category.image} title={category.title} />
+          </Box>
+        ))}
+      </Box>
+    </Box>
+  );
 };
 
 export default TopCategories;
