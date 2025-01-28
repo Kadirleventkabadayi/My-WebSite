@@ -1,32 +1,35 @@
 import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  LinkedIn,
-  GitHub,
-} from "@mui/icons-material";
+import { Twitter, Instagram, LinkedIn, GitHub } from "@mui/icons-material";
 import SocialMediaBtn from "../buttons/SocialMediaBtn";
 
 const SocialMediaCard: React.FC = () => {
   return (
-    <Card>
+    <Card
+      sx={{
+        width: "22vw",
+        margin: "auto",
+        marginTop: 5,
+        position: "absolute",
+        right: "15%",
+      }}
+    >
       <CardContent>
-        <Typography variant="h5" component="div" gutterBottom>
+        <Typography
+          variant="h5"
+          component="div"
+          gutterBottom
+          sx={{ fontWeight: "bold", fontSize: "2rem" }}
+        >
           Social Networks
         </Typography>
-        <Box display="flex" flexDirection="column" gap={2}>
+        <Box display="grid" gridTemplateColumns="1fr 1fr" gap={2}>
           <SocialMediaBtn
             icon={Twitter}
             name="Twitter"
             url="https://twitter.com"
           />
-          <SocialMediaBtn
-            icon={Facebook}
-            name="Facebook"
-            url="https://facebook.com"
-          />
+
           <SocialMediaBtn
             icon={Instagram}
             name="Instagram"

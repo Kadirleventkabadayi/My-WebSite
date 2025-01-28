@@ -7,6 +7,7 @@
   --foreground: #171717;
   --topArea: #f5f5f5;
   --categoryArea: #d7d7e2;
+  --socialMediaBtn: #e1e5ec;
 }
 
 @media (prefers-color-scheme: light) {
@@ -15,6 +16,7 @@
     --foreground: #171717;
     --topArea: #f5f5f5;
     --categorArea: #c4d5d8;
+    --socialMediaBtn: #e1e5ec;
   }
 }
 
@@ -24,6 +26,7 @@
     --foreground: #ededed;
     --topArea: #171717;
     --categoryArea: #1f1f1f;
+    --socialMediaBtn: #1f1f1f;
   }
 }
 
