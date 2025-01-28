@@ -43,6 +43,7 @@ const SocialMediaBtn: React.FC<SocialMediaBtnProps> = ({
         fontWeight: "600",
         bgcolor: "var(--socialMediaBtn)",
         color: "var(--foreground)",
+        width: "20%",
       }}
     >
       <Icon
