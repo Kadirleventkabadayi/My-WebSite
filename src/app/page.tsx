@@ -16,7 +16,7 @@ export default function Home() {
       >
         <TopCategories />
       </Box>
-      <Box sx={{ bgcolor: "var(--topArea)" }}>
+      <Box sx={{ bgcolor: "var(--topArea)", pb: 5 }}>
         <SocialMediaCard />
       </Box>
     </Box>
