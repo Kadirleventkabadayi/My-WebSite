@@ -5,9 +5,14 @@ import SelectedCard from "../cards/SelectedCard";
 
 const DUMMY_DATA = ["Tech", "Robot", "Laptop"];
 
-function TopArea() {
+interface TopAreaProps {
+  id: string;
+}
+
+function TopArea({ id }: TopAreaProps) {
   return (
     <Box
+      id={id}
       sx={{
         alignItems: "center",
         justifyContent: "center",
