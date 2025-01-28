@@ -1,3 +1,4 @@
+import { timeAgo } from "@/app/lib/utils";
 import {
   Avatar,
   Box,
@@ -14,11 +15,23 @@ interface SelectedCardProps {
   cardSx?: SxProps<Theme>;
   cardType?: string;
   title: string;
+  desciption: string;
+  updated_at: string;
+  repoUrl: string;
 }
 
-const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
+const SelectedCard = ({
+  cardSx,
+  cardType,
+  title,
+  desciption,
+  updated_at,
+  repoUrl,
+}: SelectedCardProps) => {
+  console.log(updated_at);
   return (
     <Card
+      onClick={() => window.open(repoUrl)}
       sx={{
         maxWidth: 700,
 
@@ -40,13 +53,20 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
           alt="green iguana"
         />
-        <CardContent sx={{ display: "flex", flexDirection: "column" }}>
+        <CardContent
+          sx={{
+            height: "24vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
           <Typography
             gutterBottom
             variant="h5"
             component="div"
             sx={{
-              width: "25%",
+              width: "45%",
               backgroundColor: cardType || "orange",
               p: 0.5,
               borderRadius: 1,
@@ -58,48 +78,56 @@ const SelectedCard = ({ cardSx, cardType, title }: SelectedCardProps) => {
           >
             {title.toUpperCase()}
           </Typography>
-          <Typography
-            variant="body2"
+          <Box
             sx={{
-              height: "40%",
-              color: "var(--foreground)",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              fontWeight: "bold",
-              fontSize: "1.2rem",
-              mt: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              height: "60%",
             }}
           >
-            Levent is the best developer in the world. Because he is the best.
-            For these reasons, he is the best.
-          </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                height: "40%",
+                color: "var(--foreground)",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                fontWeight: "bold",
+                fontSize: "1.2rem",
+                mt: 1,
+              }}
+            >
+              {desciption} project
+            </Typography>
 
-          <Box
-            sx={{ display: "flex", alignItems: "center", marginTop: "auto" }}
-          >
-            <Avatar
-              sx={{ width: 24, height: 24, marginRight: 1 }}
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
-            />
-            <Typography
-              variant="body2"
-              color="var(--foreground)"
-              sx={{ fontWeight: "bold" }}
+            <Box
+              sx={{ display: "flex", alignItems: "center", marginTop: "auto" }}
             >
-              Kadir Levent
-            </Typography>
-            <Divider
-              sx={{ marginInline: 1, borderColor: "var(--foreground)" }}
-              orientation="vertical"
-              flexItem
-            />
-            <Typography
-              variant="body2"
-              color="var(--foreground)"
-              sx={{ fontWeight: "bold", color: "gray" }}
-            >
-              Last updated 3 mins ago
-            </Typography>
+              <Avatar
+                sx={{ width: 24, height: 24, marginRight: 1 }}
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
+              />
+              <Typography
+                variant="body2"
+                color="var(--foreground)"
+                sx={{ fontWeight: "bold" }}
+              >
+                Kadir Levent
+              </Typography>
+              <Divider
+                sx={{ marginInline: 1, borderColor: "var(--foreground)" }}
+                orientation="vertical"
+                flexItem
+              />
+              <Typography
+                variant="body2"
+                color="var(--foreground)"
+                sx={{ fontWeight: "bold", color: "gray" }}
+              >
+                {timeAgo(updated_at)}
+              </Typography>
+            </Box>
           </Box>
         </CardContent>
       </CardActionArea>
