@@ -15,6 +15,8 @@ export default {
         categoryArea: "var(--categoryArea)",
         socialMediaBtn: "var(--socialMedia)",
         socialMediaCard: "var(--socialMediaCard)",
+        footerString1: "var(--footerString1)",
+        footerString2: "var(--footerString2)",
       },
     },
   },
