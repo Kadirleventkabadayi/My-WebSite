@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import TopArea from "./components/areas/TopArea";
 import TopCategories from "./components/areas/TopCatefories";
-import CustomHeader from "./components/areas/CustomHeader";
 import { fetchGitHubData } from "./lib/utils";
 import { RepoData } from "./lib/types";
 
@@ -59,8 +58,8 @@ export default function Home() {
 
   return (
     <Box>
-      <div id="top"></div>
-      <CustomHeader />
+      <Box id="top"></Box>
+      
       <TopArea id="TopProjects" repoData={data} />
       <Box
         id="Techs"
