@@ -40,7 +40,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
             right: 0,
             bottom: 0,
             background:
-              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.76234243697479)3%, rgba(0,0,0,0) 100%)",
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6446953781512605) 23%, rgba(0,0,0,0.15730042016806722) 47%, rgba(0,0,0,0.04805672268907568) 74%, rgba(0,0,0,0) 100%)",
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "center",
