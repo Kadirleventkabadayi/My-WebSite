@@ -5,11 +5,22 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Box, Switch } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const CustomHeader: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const router = useRouter();
+
+  const handlePush = (href: string) => {
+    router.push(href);
+  };
 
   const handleScroll = (id: string) => {
+    const url = new URL(window.location.href);
+    const lastParam = url.pathname.split("/").filter(Boolean).pop();
+    if (lastParam && lastParam !== "/") {
+      handlePush(`/`);
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -55,6 +66,9 @@ const CustomHeader: React.FC = () => {
           </Button>
           <Button color="inherit" onClick={() => handleScroll("Techs")}>
             Technologies and Frameworks
+          </Button>
+          <Button color="inherit" onClick={() => handlePush("/about")}>
+            About Me
           </Button>
         </Box>
         <Switch

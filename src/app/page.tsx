@@ -58,8 +58,6 @@ export default function Home() {
 
   return (
     <Box>
-      <Box id="top"></Box>
-      
       <TopArea id="TopProjects" repoData={data} />
       <Box
         id="Techs"
