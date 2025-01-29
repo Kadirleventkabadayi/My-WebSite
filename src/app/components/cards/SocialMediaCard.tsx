@@ -40,17 +40,17 @@ const SocialMediaCard: React.FC = () => {
             paddingBottom: "5%",
           }}
         >
-          <SocialMediaBtn icon={XIcon} name="X" url="https://x.com" />
-          <SocialMediaBtn
-            icon={LinkedIn}
-            name="LinkedIn"
-            url="https://linkedin.com"
-          />
           <SocialMediaBtn
             icon={GitHub}
             name="GitHub"
-            url="https://github.com"
+            url="https://github.com/Kadirleventkabadayi?tab=overview&from=2025-01-01&to=2025-01-29"
+          />{" "}
+          <SocialMediaBtn
+            icon={LinkedIn}
+            name="LinkedIn"
+            url="https://www.linkedin.com/in/kadir-levent-kabaday%C4%B1-7b015b25a/"
           />
+          <SocialMediaBtn icon={XIcon} name="X" url="https://x.com/Prelencos" />
         </Box>
       </CardContent>
     </Card>
