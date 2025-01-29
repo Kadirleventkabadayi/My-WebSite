@@ -1,4 +1,3 @@
-
 import { replaceHyphensWithSpaces, timeAgo } from "@/app/lib/utils";
 import {
   Avatar,
@@ -34,7 +33,7 @@ function TopSelectedCard({
     <Card onClick={() => window.open(repoUrl)} sx={cardSx} className="m-2">
       <CardActionArea className="flex">
         <CardMedia
-          className="w-[60vw] h-[80vh] rounded-lg"
+          className="w-[60vw] h-[80vh] "
           component="img"
           image="/ai.png"
           alt="Levent"

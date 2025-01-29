@@ -64,7 +64,7 @@ const SelectedCard = ({
               variant="body2"
               className="h-[40%] text-foreground overflow-hidden text-ellipsis font-bold text-xl mt-1"
             >
-              {title} project
+              {description} project
             </Typography>
 
             <Box className="flex items-center mt-auto">
