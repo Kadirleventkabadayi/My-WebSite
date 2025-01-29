@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
-import { Twitter, Instagram, LinkedIn, GitHub } from "@mui/icons-material";
+import { LinkedIn, GitHub } from "@mui/icons-material";
+import XIcon from "@mui/icons-material/X";
 import SocialMediaBtn from "../buttons/SocialMediaBtn";
 
 const SocialMediaCard: React.FC = () => {
@@ -24,7 +25,7 @@ const SocialMediaCard: React.FC = () => {
             fontSize: "2rem",
             color: "var(--foreground)",
             textAlign: "center",
-            paddingBottom: "10%",
+            paddingBottom: "5%",
           }}
         >
           Social Medias
@@ -39,17 +40,7 @@ const SocialMediaCard: React.FC = () => {
             paddingBottom: "5%",
           }}
         >
-          <SocialMediaBtn
-            icon={Twitter}
-            name="Twitter"
-            url="https://twitter.com"
-          />
-
-          <SocialMediaBtn
-            icon={Instagram}
-            name="Instagram"
-            url="https://instagram.com"
-          />
+          <SocialMediaBtn icon={XIcon} name="X" url="https://x.com" />
           <SocialMediaBtn
             icon={LinkedIn}
             name="LinkedIn"
