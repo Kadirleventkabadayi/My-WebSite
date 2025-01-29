@@ -46,4 +46,8 @@ function timeAgo(dateString: string): string {
   return `${Math.floor(seconds)} seconds ago`;
 }
 
-export { getColorByString, fetchGitHubData, timeAgo };
+const replaceHyphensWithSpaces = (input: string): string => {
+  return input.replace(/-/g, " ");
+};
+
+export { getColorByString, fetchGitHubData, timeAgo, replaceHyphensWithSpaces };
