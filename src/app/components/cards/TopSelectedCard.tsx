@@ -1,4 +1,4 @@
-import { timeAgo } from "@/app/lib/utils";
+import { replaceHyphensWithSpaces, timeAgo } from "@/app/lib/utils";
 import {
   Avatar,
   Box,
@@ -76,7 +76,9 @@ function TopSelectedCard({
               textAlign: "center",
             }}
           >
-            {title.replace("Erciyes-", "").trim().toUpperCase()}
+            {replaceHyphensWithSpaces(
+              title.replace("Erciyes-", "").trim().toUpperCase()
+            )}
           </Typography>
           <Typography
             variant="body2"

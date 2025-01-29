@@ -1,4 +1,4 @@
-import { timeAgo } from "@/app/lib/utils";
+import { replaceHyphensWithSpaces, timeAgo } from "@/app/lib/utils";
 import {
   Avatar,
   Box,
@@ -78,7 +78,7 @@ const SelectedCard = ({
               textAlign: "center",
             }}
           >
-            {title.toUpperCase()}
+            {replaceHyphensWithSpaces(title.toUpperCase())}
           </Typography>
           <Box
             sx={{
