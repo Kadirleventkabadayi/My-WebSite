@@ -1,9 +1,9 @@
 "use client";
 
-import { Box, IconButton, Typography } from "@mui/material";
+import { useRef } from "react";
 import CategoryCard from "../cards/CategoryCard";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
-import { useRef } from "react";
+import { Box, IconButton, Typography } from "@mui/material";
 import { technologies } from "@/app/lib/consts";
 
 const TopCategories: React.FC = () => {
@@ -30,50 +30,24 @@ const TopCategories: React.FC = () => {
   };
 
   return (
-    <Box
-      sx={{
-        position: "relative",
-        maxWidth: "67vw",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "16px",
-      }}
-    >
+    <Box className="relative max-w-[67vw] flex flex-col items-center p-4">
       <Typography
-        sx={{
-          paddingBlockStart: 5,
-          fontWeight: "bold",
-          color: "var(--foreground)",
-          textAlign: "center",
-        }}
-        variant="h2"
+        className="pt-5 font-bold text-foreground text-center"
+        variant="h3"
       >
-        Technologies and Frameworks{" "}
+        Technologies and Frameworks
       </Typography>
-      <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "flex-end",
-          alignItems: "center",
-          padding: "2%",
-          gap: 2,
-        }}
-      >
+
+      <Box className="w-full flex justify-end items-center py-2 gap-2">
         <IconButton
           onClick={handleScrollLeft}
-          sx={{
-            bgcolor: "white",
-          }}
+          className="bg-white p-2 rounded-full"
         >
           <ArrowBack />
         </IconButton>
         <IconButton
           onClick={handleScrollRight}
-          sx={{
-            bgcolor: "white",
-          }}
+          className="bg-white p-2 rounded-full"
         >
           <ArrowForward />
         </IconButton>
@@ -82,24 +56,13 @@ const TopCategories: React.FC = () => {
       <Box
         ref={scrollContainerRef}
         sx={{
-          overflowX: "auto",
           WebkitOverflowScrolling: "touch",
           "&::-webkit-scrollbar": { display: "none" },
-          display: "flex",
-          gap: 3,
-          padding: "16px",
-          scrollBehavior: "smooth",
-          width: "100%",
         }}
+        className="overflow-x-auto scroll-smooth w-full flex gap-3 p-4"
       >
         {technologies.map((category, index) => (
-          <Box
-            key={index}
-            sx={{
-              flex: "0 0 auto",
-              width: "15vw",
-            }}
-          >
+          <Box key={index} className="flex-none w-[15vw]">
             <CategoryCard
               image={category.image}
               title={category.title}

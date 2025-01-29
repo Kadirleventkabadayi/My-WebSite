@@ -18,37 +18,16 @@ function TopArea({ id, repoData }: TopAreaProps) {
   const otherRepoData = repoData?.filter(
     (item: RepoData) => item.name !== "Erciyes-AI-Content-Creator"
   );
+
   return (
-    <Box
-      id={id}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        backgroundColor: "var(--topArea)",
-        height: "100vh",
-        pt: 5,
-      }}
-    >
+    <Box id={id} className="flex flex-col items-center bg-topArea h-screen ">
       <Typography
-        sx={{
-          pb: 5,
-          fontWeight: "bold",
-          color: "var(--foreground)",
-          textAlign: "center",
-        }}
+        className="pb-20 font-bold text-foreground text-center"
         variant="h2"
       >
         Top Projects
       </Typography>
-      <Box
-        sx={{
-          alignItems: "center",
-          justifyContent: "center",
-          display: "flex",
-          gap: 2,
-        }}
-      >
+      <Box className="flex items-center justify-center gap-2">
         <TopSelectedCard
           title={erciyesAIContentCreator?.name || ""}
           cardType={getColorByString(erciyesAIContentCreator?.name || "")}
@@ -56,14 +35,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
           updated_at={erciyesAIContentCreator?.updated_at || ""}
           repoUrl={erciyesAIContentCreator?.html_url || ""}
         />
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            flexDirection: "column",
-            height: "80vh",
-          }}
-        >
+        <Box className="flex flex-col justify-between h-[80vh]">
           {otherRepoData
             .filter((_, index) => [0, 4, 3].includes(index))
             .map((item, itemIndex) => (
@@ -71,7 +43,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
                 title={item.name}
                 cardType={getColorByString(item.name)}
                 key={item.name}
-                desciption={item.name}
+                description={item.name}
                 updated_at={item.updated_at}
                 repoUrl={item.html_url}
                 imgUrl={imgList[itemIndex]}

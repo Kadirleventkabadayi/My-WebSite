@@ -1,6 +1,6 @@
-import { Card, CardContent, Typography, CardMedia } from "@mui/material";
-import React, { useState } from "react";
-import { Modal, Box } from "@mui/material";
+import { useState } from "react";
+import { Modal } from "@mui/material";
+import { Box } from "@mui/system";
 
 interface CategoryCardProps {
   image: string;
@@ -19,81 +19,22 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   const handleClose = () => setOpen(false);
 
   return (
-    <Box
-      sx={{
-        width: "15vw",
-        overflow: "hidden",
-        bgcolor: "white",
-        borderRadius: 2,
-        userSelect: "none",
-      }}
-    >
-      <Card
-        sx={{
-          position: "relative",
-          color: "var(--background)",
-          backgroundColor: "var(--on-background)",
-          borderRadius: 2,
-        }}
+    <Box className="w-[15vw] overflow-hidden bg-white rounded-lg select-none">
+      <div
+        className="relative cursor-pointer bg-on-background rounded-lg"
         onClick={handleOpen}
       >
-        <CardMedia component="img" height="140" image={image} alt={title} />
-        <CardContent
-          sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background:
-              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6446953781512605) 23%, rgba(0,0,0,0.15730042016806722) 47%, rgba(0,0,0,0.04805672268907568) 74%, rgba(0,0,0,0) 100%)",
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            sx={{
-              width: "10%",
-              border: "white solid 1px",
-              mb: "5%",
-              marginInline: "2%",
-            }}
-          />
-          <Typography
-            variant="h5"
-            component="div"
-            sx={{ color: "white", userSelect: "none" }}
-          >
-            {title}
-          </Typography>
-          <Box
-            sx={{
-              width: "10%",
-              border: "white solid 1px",
-              mb: "5%",
-              marginInline: "2%",
-            }}
-          />
-        </CardContent>
-      </Card>
+        <img className="h-[140] w-full object-cover" src={image} alt={title} />
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-black via-black/64 to-transparent flex items-end justify-center p-4">
+          <div className="w-[10%] border-white border mb-4 mx-2"></div>
+          <h5 className="text-white text-xl font-bold select-none">{title}</h5>
+          <div className="w-[10%] border-white border mb-4 mx-2"></div>
+        </div>
+      </div>
       <Modal open={open} onClose={handleClose}>
-        <Box
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: 400,
-            bgcolor: "var(--background)",
-            boxShadow: 24,
-            p: 4,
-          }}
-        >
-          <Typography variant="h6" component="h2">
-            {title}
-          </Typography>
-          <Typography sx={{ mt: 2 }}>{description}</Typography>
+        <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] bg-background shadow-lg p-4 rounded-lg">
+          <h6 className="text-lg font-semibold">{title}</h6>
+          <p className="mt-2">{description}</p>
         </Box>
       </Modal>
     </Box>

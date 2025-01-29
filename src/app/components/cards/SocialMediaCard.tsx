@@ -1,45 +1,22 @@
-import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import { LinkedIn, GitHub } from "@mui/icons-material";
 import XIcon from "@mui/icons-material/X";
 import SocialMediaBtn from "../buttons/SocialMediaBtn";
 
-const SocialMediaCard: React.FC = () => {
+const SocialMediaCard = () => {
   return (
-    <Card
-      sx={{
-        paddingBlock: "2%",
-        width: "65vw",
-        margin: "auto",
-        bgcolor: "var(--socialMediaCard)",
-        boxShadow: 0,
-      }}
-    >
+    <Card className="p-8 w-[65vw] mx-auto bg-socialMediaCard shadow-none">
       <CardContent>
         <Typography
           variant="h5"
           component="div"
           gutterBottom
-          sx={{
-            fontWeight: "bold",
-            fontSize: "2rem",
-            color: "var(--foreground)",
-            textAlign: "center",
-            paddingBottom: "5%",
-          }}
+          className="font-bold text-2xl text-foreground text-center pb-8"
         >
           Social Medias
         </Typography>
 
-        <Box
-          gap={2}
-          sx={{
-            display: "flex",
-            width: "100%",
-            justifyContent: "center",
-            paddingBottom: "5%",
-          }}
-        >
+        <Box className="flex gap-2 w-full justify-center pb-8">
           <SocialMediaBtn
             icon={GitHub}
             name="GitHub"

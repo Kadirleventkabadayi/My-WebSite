@@ -13,22 +13,10 @@ const CustomHeader: React.FC = () => {
   };
 
   return (
-    <AppBar
-      position="sticky"
-      sx={{
-        bgcolor: "royalblue",
-        display: "flex",
-        alignItems: "flex-start",
-      }}
-    >
-      <Toolbar sx={{ width: "60%", gap: 5 }}>
+    <AppBar position="sticky" className="bg-royalblue flex items-start">
+      <Toolbar className="w-[60%] gap-5">
         <Button
-          sx={{
-            fontSize: "large",
-            fontWeight: "bold",
-            borderBlockEnd: "2px solid white",
-            borderRadius: 0,
-          }}
+          className="text-lg font-bold border-b-2 border-white rounded-none"
           color="inherit"
           onClick={() => handleScroll("top")}
         >

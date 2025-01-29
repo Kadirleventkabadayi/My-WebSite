@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import Button from "@mui/material/Button";
 import { SvgIconComponent } from "@mui/icons-material";
 
 interface SocialMediaBtnProps {
@@ -28,31 +25,21 @@ const SocialMediaBtn: React.FC<SocialMediaBtnProps> = ({
   };
 
   return (
-    <Button
-      variant="contained"
-      color="primary"
+    <button
       onClick={() => window.open(url, "_blank")}
-      sx={{
-        display: "flex",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        flexWrap: "wrap",
-        borderRadius: 1,
-        fontWeight: "600",
-        bgcolor: "var(--socialMediaBtn)",
-        color: "var(--foreground)",
-      }}
+      className="flex items-center justify-start flex-wrap rounded-xl font-semibold bg-socialMediaBtn text-foreground p-2"
     >
       <Icon
         sx={{
-          borderRadius: 1,
+          borderRadius: "0.25rem",
           width: 50,
           height: 50,
-          bgcolor: setColor(name),
+          backgroundColor: setColor(name),
           color: "white",
         }}
+        className="p-2"
       />
-    </Button>
+    </button>
   );
 };
 
