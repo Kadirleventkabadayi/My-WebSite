@@ -11,6 +11,7 @@ const SocialMediaCard: React.FC = () => {
         width: "65vw",
         margin: "auto",
         bgcolor: "var(--socialMediaCard)",
+        boxShadow: 0,
       }}
     >
       <CardContent>
