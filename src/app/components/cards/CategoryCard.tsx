@@ -20,6 +20,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
         overflow: "hidden",
         bgcolor: "white",
         borderRadius: 2,
+        userSelect: "none",
       }}
     >
       <Card
@@ -54,7 +55,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
               marginInline: "2%",
             }}
           />
-          <Typography variant="h5" component="div" sx={{ color: "white" }}>
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{ color: "white", userSelect: "none" }}
+          >
             {title}
           </Typography>
           <Box
