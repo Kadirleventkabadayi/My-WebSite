@@ -39,12 +39,12 @@ function TopSelectedCard({
       <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
           sx={{
-            width: "100%",
+            width: "60vw",
             height: "80vh",
             borderRadius: 1,
           }}
           component="img"
-          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
+          image="/ai.png"
           alt="Levent"
         />
 

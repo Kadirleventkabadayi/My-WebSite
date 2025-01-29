@@ -3,6 +3,7 @@ import TopSelectedCard from "../cards/TopSelectedCard";
 import { getColorByString } from "@/app/lib/utils";
 import SelectedCard from "../cards/SelectedCard";
 import { RepoData } from "@/app/lib/types";
+import { imgList } from "@/app/lib/consts";
 
 interface TopAreaProps {
   id: string;
@@ -65,7 +66,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
         >
           {otherRepoData
             .filter((_, index) => [0, 4, 3].includes(index))
-            .map((item) => (
+            .map((item, itemIndex) => (
               <SelectedCard
                 title={item.name}
                 cardType={getColorByString(item.name)}
@@ -73,6 +74,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
                 desciption={item.name}
                 updated_at={item.updated_at}
                 repoUrl={item.html_url}
+                imgUrl={imgList[itemIndex]}
               />
             ))}
         </Box>
