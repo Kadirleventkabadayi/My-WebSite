@@ -16,10 +16,8 @@ const SocialMediaBtn: React.FC<SocialMediaBtnProps> = ({
   url,
 }) => {
   const setColor = (name: string) => {
-    if (name === "Twitter") {
-      return "skyblue";
-    } else if (name === "Instagram") {
-      return "blueviolet";
+    if (name === "X") {
+      return "#1f1f1f";
     } else if (name === "LinkedIn") {
       return "royalblue";
     } else if (name === "GitHub") {
@@ -43,7 +41,6 @@ const SocialMediaBtn: React.FC<SocialMediaBtnProps> = ({
         fontWeight: "600",
         bgcolor: "var(--socialMediaBtn)",
         color: "var(--foreground)",
-        width: "20%",
       }}
     >
       <Icon
@@ -51,12 +48,10 @@ const SocialMediaBtn: React.FC<SocialMediaBtnProps> = ({
           borderRadius: 1,
           width: 50,
           height: 50,
-          mr: "10%",
           bgcolor: setColor(name),
           color: "white",
         }}
       />
-      {name}
     </Button>
   );
 };

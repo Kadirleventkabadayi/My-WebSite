@@ -1,40 +1,39 @@
 "use client";
 
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import CategoryCard from "../cards/CategoryCard";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import { useRef } from "react";
 
 const categories = [
   {
-    title: "Technology",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+    title: "React",
+    image: "/React.png",
   },
   {
-    title: "Health",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+    title: "Next",
+    image: "/next.png",
   },
   {
-    title: "Finance",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+    title: "JavaScript",
+    image: "/JS.png",
   },
   {
-    title: "Travel",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+    title: "TypeScript",
+    image: "/TS.png",
   },
   {
-    title: "Finance",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+    title: "Tailwind CSS",
+    image: "/tailwind_css.png",
   },
   {
-    title: "Travel",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+    title: "Node.js",
+    image: "/Node.png",
+  },
+
+  {
+    title: "Java Spring",
+    image: "/Spring.png",
   },
 ];
 
@@ -72,6 +71,17 @@ const TopCategories: React.FC = () => {
         padding: "16px",
       }}
     >
+      <Typography
+        sx={{
+          paddingBlockStart: 5,
+          fontWeight: "bold",
+          color: "var(--foreground)",
+          textAlign: "center",
+        }}
+        variant="h2"
+      >
+        Technologies and Frameworks{" "}
+      </Typography>
       <Box
         sx={{
           width: "100%",

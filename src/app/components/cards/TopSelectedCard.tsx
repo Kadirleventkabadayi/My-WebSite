@@ -39,12 +39,12 @@ function TopSelectedCard({
       <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
           sx={{
-            width: "100%",
+            width: "60vw",
             height: "80vh",
             borderRadius: 1,
           }}
           component="img"
-          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
+          image="/ai.png"
           alt="Levent"
         />
 
@@ -56,7 +56,7 @@ function TopSelectedCard({
             width: "100%",
             height: "100%",
             background:
-              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.76234243697479)3%, rgba(0,0,0,0) 100%)",
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6446953781512605) 23%, rgba(0,0,0,0.15730042016806722) 47%, rgba(0,0,0,0.04805672268907568) 74%, rgba(0,0,0,0) 100%)",
             padding: 2,
             justifyContent: "flex-end",
           }}

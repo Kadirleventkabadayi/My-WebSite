@@ -18,6 +18,7 @@ interface SelectedCardProps {
   desciption: string;
   updated_at: string;
   repoUrl: string;
+  imgUrl: string;
 }
 
 const SelectedCard = ({
@@ -27,6 +28,7 @@ const SelectedCard = ({
   desciption,
   updated_at,
   repoUrl,
+  imgUrl,
 }: SelectedCardProps) => {
   console.log(updated_at);
   return (
@@ -50,7 +52,7 @@ const SelectedCard = ({
             ...cardSx,
           }}
           component="img"
-          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
+          image={imgUrl}
           alt="green iguana"
         />
         <CardContent

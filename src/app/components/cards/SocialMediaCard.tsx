@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
-import { Twitter, Instagram, LinkedIn, GitHub } from "@mui/icons-material";
+import { LinkedIn, GitHub } from "@mui/icons-material";
+import XIcon from "@mui/icons-material/X";
 import SocialMediaBtn from "../buttons/SocialMediaBtn";
 
 const SocialMediaCard: React.FC = () => {
@@ -11,6 +12,7 @@ const SocialMediaCard: React.FC = () => {
         width: "65vw",
         margin: "auto",
         bgcolor: "var(--socialMediaCard)",
+        boxShadow: 0,
       }}
     >
       <CardContent>
@@ -23,11 +25,10 @@ const SocialMediaCard: React.FC = () => {
             fontSize: "2rem",
             color: "var(--foreground)",
             textAlign: "center",
-            paddingBottom: "10%",
-            textDecoration: "underline",
+            paddingBottom: "5%",
           }}
         >
-          Social Networks
+          Social Medias
         </Typography>
 
         <Box
@@ -40,26 +41,16 @@ const SocialMediaCard: React.FC = () => {
           }}
         >
           <SocialMediaBtn
-            icon={Twitter}
-            name="Twitter"
-            url="https://twitter.com"
-          />
-
-          <SocialMediaBtn
-            icon={Instagram}
-            name="Instagram"
-            url="https://instagram.com"
-          />
+            icon={GitHub}
+            name="GitHub"
+            url="https://github.com/Kadirleventkabadayi?tab=overview&from=2025-01-01&to=2025-01-29"
+          />{" "}
           <SocialMediaBtn
             icon={LinkedIn}
             name="LinkedIn"
-            url="https://linkedin.com"
+            url="https://www.linkedin.com/in/kadir-levent-kabaday%C4%B1-7b015b25a/"
           />
-          <SocialMediaBtn
-            icon={GitHub}
-            name="GitHub"
-            url="https://github.com"
-          />
+          <SocialMediaBtn icon={XIcon} name="X" url="https://x.com/Prelencos" />
         </Box>
       </CardContent>
     </Card>

@@ -14,7 +14,15 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box sx={{ width: "15vw", overflow: "hidden" }}>
+    <Box
+      sx={{
+        width: "15vw",
+        overflow: "hidden",
+        bgcolor: "white",
+        borderRadius: 2,
+        userSelect: "none",
+      }}
+    >
       <Card
         sx={{
           position: "relative",
@@ -32,7 +40,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6446953781512605) 23%, rgba(0,0,0,0.15730042016806722) 47%, rgba(0,0,0,0.04805672268907568) 74%, rgba(0,0,0,0) 100%)",
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "center",
@@ -46,7 +55,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
               marginInline: "2%",
             }}
           />
-          <Typography variant="h5" component="div" sx={{ color: "white" }}>
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{ color: "white", userSelect: "none" }}
+          >
             {title}
           </Typography>
           <Box
