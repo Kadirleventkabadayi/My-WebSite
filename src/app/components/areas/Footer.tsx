@@ -13,7 +13,7 @@ import XIcon from "@mui/icons-material/X";
 
 const Footer = () => {
   return (
-    <Box component="footer" className="py-4 px-2 mt-auto bg-categoryArea">
+    <Box component="footer" className="py-4 px-2 mt-auto bg-topArea">
       <Container maxWidth="sm">
         <Typography
           variant="h6"

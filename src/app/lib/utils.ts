@@ -4,7 +4,7 @@ function getColorByString(input: string): string {
   switch (input.toLowerCase()) {
     case "admin-dashboard":
       return "#08a8f0";
-    case "myblog":
+    case "my-website":
       return "#ff4400";
     case "my-library":
       return "purple";

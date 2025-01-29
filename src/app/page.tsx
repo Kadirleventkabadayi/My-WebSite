@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import TopArea from "./components/areas/TopArea";
 import TopCategories from "./components/areas/TopCatefories";
-import SocialMediaCard from "./components/cards/SocialMediaCard";
 import CustomHeader from "./components/areas/CustomHeader";
 import { fetchGitHubData } from "./lib/utils";
 import { RepoData } from "./lib/types";
@@ -72,9 +71,6 @@ export default function Home() {
         }}
       >
         <TopCategories />
-      </Box>
-      <Box id="SocialMedias" sx={{ bgcolor: "var(--topArea)", pb: 5 }}>
-        <SocialMediaCard />
       </Box>
     </Box>
   );
