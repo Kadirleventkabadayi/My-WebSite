@@ -24,7 +24,6 @@ const SocialMediaCard: React.FC = () => {
             color: "var(--foreground)",
             textAlign: "center",
             paddingBottom: "10%",
-            textDecoration: "underline",
           }}
         >
           Social Networks

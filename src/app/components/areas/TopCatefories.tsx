@@ -72,7 +72,7 @@ const TopCategories: React.FC = () => {
         padding: "16px",
       }}
     >
-      <Typography variant="h1">Top Categories</Typography>
+      <Typography variant="h2">Top Categories</Typography>
       <Box
         sx={{
           width: "100%",

@@ -30,7 +30,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
         height: "95vh",
       }}
     >
-      <Typography variant="h1">Top Area</Typography>
+      <Typography variant="h2">Top Area</Typography>
       <Box
         sx={{
           alignItems: "center",
