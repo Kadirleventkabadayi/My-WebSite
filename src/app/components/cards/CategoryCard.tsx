@@ -14,7 +14,14 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box sx={{ width: "15vw", overflow: "hidden" }}>
+    <Box
+      sx={{
+        width: "15vw",
+        overflow: "hidden",
+        bgcolor: "white",
+        borderRadius: 2,
+      }}
+    >
       <Card
         sx={{
           position: "relative",

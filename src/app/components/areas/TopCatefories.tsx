@@ -7,34 +7,40 @@ import { useRef } from "react";
 
 const categories = [
   {
-    title: "Technology",
+    title: "JavaScript",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/225px-Unofficial_JavaScript_logo_2.svg.png",
   },
   {
-    title: "Health",
+    title: "TypeScript",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+      "https://w7.pngwing.com/pngs/915/519/png-transparent-typescript-hd-logo-thumbnail.png",
   },
   {
-    title: "Finance",
+    title: "Java Spring",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+      "https://miro.medium.com/v2/resize:fit:624/1*dwa1SCG85BAzQttURVUvrA.png",
   },
   {
-    title: "Travel",
+    title: "Node.js",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6mkk0TKy0Hww7V1J9JkVUaHoF35GhtJN1Tw&s",
   },
   {
-    title: "Finance",
+    title: "React",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTLnaWpiWTDkNU459gZ_p_KvqEe3YusUHguCFAB03VIR9hNzfIA8JiEzUrD8UAmKVOKk8",
   },
   {
-    title: "Travel",
+    title: "Next",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s",
+      "https://images.seeklogo.com/logo-png/44/2/next-js-logo-png_seeklogo-449824.png",
+  },
+  ,
+  {
+    title: "Tailwind CSS",
+    image:
+      "https://brandlogos.net/wp-content/uploads/2023/11/tailwind_css-logo_brandlogos.net_v91ni.png",
   },
 ];
 
