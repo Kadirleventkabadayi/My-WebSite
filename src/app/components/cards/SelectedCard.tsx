@@ -53,9 +53,16 @@ const SelectedCard = ({
             gutterBottom
             variant="h5"
             component="div"
-            className={`w-[45%] bg-${
-              cardType || "orange"
-            } p-1 rounded text-white font-bold text-sm text-center`}
+            sx={{
+              width: "45%",
+              backgroundColor: cardType || "orange",
+              p: 0.5,
+              borderRadius: 1,
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "0.8rem",
+              textAlign: "center",
+            }}
           >
             {replaceHyphensWithSpaces(title.toUpperCase())}
           </Typography>
