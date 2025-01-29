@@ -62,9 +62,9 @@ export default function Home() {
     <Box>
       <div id="top"></div>
       <CustomHeader />
-      <TopArea id="segment1" repoData={data} />
+      <TopArea id="TopProjects" repoData={data} />
       <Box
-        id="segment2"
+        id="Techs"
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -73,7 +73,7 @@ export default function Home() {
       >
         <TopCategories />
       </Box>
-      <Box id="segment3" sx={{ bgcolor: "var(--topArea)", pb: 5 }}>
+      <Box id="SocialMedias" sx={{ bgcolor: "var(--topArea)", pb: 5 }}>
         <SocialMediaCard />
       </Box>
     </Box>

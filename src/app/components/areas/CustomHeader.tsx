@@ -34,14 +34,14 @@ const CustomHeader: React.FC = () => {
         >
           My Blog
         </Button>
-        <Button color="inherit" onClick={() => handleScroll("segment1")}>
-          Segment 1
+        <Button color="inherit" onClick={() => handleScroll("TopProjects")}>
+          Top Projects
         </Button>
-        <Button color="inherit" onClick={() => handleScroll("segment2")}>
-          Segment 2
+        <Button color="inherit" onClick={() => handleScroll("Techs")}>
+          Technologies and Frameworks
         </Button>
-        <Button color="inherit" onClick={() => handleScroll("segment3")}>
-          Segment 3
+        <Button color="inherit" onClick={() => handleScroll("SocialMedias")}>
+          Social Medias
         </Button>
       </Toolbar>
     </AppBar>
