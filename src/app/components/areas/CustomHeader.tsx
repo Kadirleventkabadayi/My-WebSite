@@ -6,14 +6,33 @@ import Button from "@mui/material/Button";
 import { Box, Switch } from "@mui/material";
 import { useEffect, useState } from "react";
 
-const CustomHeader: React.FC = () => {
+interface CustomHeaderProps {
+  isFlippedData: boolean;
+  onFlipChange: (flip: boolean) => void;
+}
+
+const CustomHeader: React.FC<CustomHeaderProps> = ({
+  isFlippedData,
+  onFlipChange,
+}) => {
   const [darkMode, setDarkMode] = useState(false);
+  const [, setIsFlipped] = useState(isFlippedData);
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
+    onFlipChange(false);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+  const handleFlip = (flip: boolean) => {
+    setIsFlipped(flip);
+    onFlipChange(flip);
+  };
+
+  const handleClick = (id: string, flip: boolean) => {
+    handleScroll(id);
+    handleFlip(flip);
   };
 
   useEffect(() => {
@@ -46,15 +65,26 @@ const CustomHeader: React.FC = () => {
           <Button
             className="text-lg font-bold border-b-2 border-white rounded-none"
             color="inherit"
-            onClick={() => handleScroll("top")}
+            onClick={() => handleClick("top", false)}
           >
             Kadir Levent Kabadayı
           </Button>
-          <Button color="inherit" onClick={() => handleScroll("TopProjects")}>
+          <Button
+            color="inherit"
+            onClick={() => handleClick("TopProjects", false)}
+          >
             Top Projects
           </Button>
-          <Button color="inherit" onClick={() => handleScroll("Techs")}>
+          <Button color="inherit" onClick={() => handleClick("Techs", false)}>
             Technologies and Frameworks
+          </Button>
+          <Button
+            color="inherit"
+            onClick={() => {
+              handleClick("top", true);
+            }}
+          >
+            About Me
           </Button>
         </Box>
         <Switch
