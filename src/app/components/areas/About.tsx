@@ -1,6 +1,6 @@
 import { Container, Typography, Box, Avatar, Link } from "@mui/material";
 
-const AboutPage: React.FC = () => {
+function About() {
   return (
     <Container maxWidth="md" sx={{ minHeight: "90vh" }}>
       <Box display="flex" flexDirection="column" alignItems="center" mt={5}>
@@ -34,6 +34,6 @@ const AboutPage: React.FC = () => {
       </Box>
     </Container>
   );
-};
+}
 
-export default AboutPage;
+export default About;
