@@ -32,7 +32,7 @@ const CustomHeader: React.FC = () => {
           color="inherit"
           onClick={() => handleScroll("top")}
         >
-          My Blog
+          Kadir Levent Kabadayı
         </Button>
         <Button color="inherit" onClick={() => handleScroll("TopProjects")}>
           Top Projects
