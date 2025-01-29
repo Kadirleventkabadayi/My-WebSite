@@ -43,9 +43,16 @@ function TopSelectedCard({
             gutterBottom
             variant="h5"
             component="div"
-            className={`bg-${
-              cardType || "orange"
-            } p-1 rounded-lg text-white font-bold text-sm text-center`}
+            sx={{
+              backgroundColor: cardType || "orange",
+              p: 0.5,
+              borderRadius: 1,
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "1rem",
+              width: "25%",
+              textAlign: "center",
+            }}
           >
             {replaceHyphensWithSpaces(
               title.replace("Erciyes-", "").trim().toUpperCase()
