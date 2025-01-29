@@ -33,7 +33,7 @@ const TopCategories: React.FC = () => {
     <Box className="relative max-w-[67vw] flex flex-col items-center p-4">
       <Typography
         className="pt-5 font-bold text-foreground text-center"
-        variant="h2"
+        variant="h3"
       >
         Technologies and Frameworks
       </Typography>
