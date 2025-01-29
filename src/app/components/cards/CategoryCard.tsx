@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal } from "@mui/material";
+import { Card, CardMedia, Modal, Typography, Divider } from "@mui/material";
 import { Box } from "@mui/system";
 
 interface CategoryCardProps {
@@ -19,25 +19,62 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   const handleClose = () => setOpen(false);
 
   return (
-    <Box className="w-[15vw] overflow-hidden bg-white rounded-lg select-none">
-      <div
-        className="relative cursor-pointer bg-on-background rounded-lg"
+    <Card
+      className="w-[15vw] overflow-hidden select-none"
+      sx={{ position: "relative" }}
+    >
+      <CardMedia
+        component="img"
+        height="140"
+        image={image}
+        alt={title}
+        className="object-cover"
         onClick={handleOpen}
+      />
+      <Box
+        sx={{
+          background: "var(--cardShadow)",
+        }}
+        className="absolute top-0 left-0 right-0 bottom-0 flex items-end justify-center p-4"
       >
-        <img className="h-[140] w-full object-cover" src={image} alt={title} />
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-black via-black/64 to-transparent flex items-end justify-center p-4">
-          <div className="w-[10%] border-white border mb-4 mx-2"></div>
-          <h5 className="text-white text-xl font-bold select-none">{title}</h5>
-          <div className="w-[10%] border-white border mb-4 mx-2"></div>
-        </div>
-      </div>
+        <Divider
+          sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
+        />
+        <Typography
+          variant="h5"
+          color="var(--foreground)"
+          className="font-bold"
+        >
+          {title}
+        </Typography>
+        <Divider
+          sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
+        />
+      </Box>
+
       <Modal open={open} onClose={handleClose}>
-        <Box className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] bg-background shadow-lg p-4 rounded-lg">
-          <h6 className="text-lg font-semibold">{title}</h6>
-          <p className="mt-2">{description}</p>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 400,
+            bgcolor: "background.paper",
+            boxShadow: 24,
+            p: 4,
+            borderRadius: 2,
+          }}
+        >
+          <Typography variant="h6" fontWeight="600">
+            {title}
+          </Typography>
+          <Typography variant="body1" sx={{ mt: 2 }}>
+            {description}
+          </Typography>
         </Box>
       </Modal>
-    </Box>
+    </Card>
   );
 };
 

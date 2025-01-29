@@ -18,6 +18,7 @@ export default {
         socialMediaCard: "var(--socialMediaCard)",
         footerString1: "var(--footerString1)",
         footerString2: "var(--footerString2)",
+        cardShadow: "var(--cardShadow)",
       },
     },
   },
