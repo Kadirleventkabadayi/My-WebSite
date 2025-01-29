@@ -58,10 +58,7 @@ export default function Home() {
   return (
     <>
       <Box id="top" />
-      <CustomHeader
-        isFlippedData={isFlipped}
-        onFlipChange={handleFlipChange}
-      />{" "}
+      <CustomHeader isFlippedData={isFlipped} onFlipChange={handleFlipChange} />
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Box
           sx={{
