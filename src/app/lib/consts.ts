@@ -1,1 +1,1 @@
-export const imgList = ["/dashboard.png", "/mylib.png", "/NoImg.jpg"];
+export const imgList = ["/dashboard.png", "/mylib.png", "/blog.png"];
