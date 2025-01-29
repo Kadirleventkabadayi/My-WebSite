@@ -24,13 +24,22 @@ function TopArea({ id, repoData }: TopAreaProps) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        paddingInline: 5,
-
         backgroundColor: "var(--topArea)",
-        height: "95vh",
+        height: "100vh",
+        pt: 5,
       }}
     >
-      <Typography variant="h2">Top Area</Typography>
+      <Typography
+        sx={{
+          pb: 5,
+          fontWeight: "bold",
+          color: "var(--foreground)",
+          textAlign: "center",
+        }}
+        variant="h2"
+      >
+        Top Projects
+      </Typography>
       <Box
         sx={{
           alignItems: "center",

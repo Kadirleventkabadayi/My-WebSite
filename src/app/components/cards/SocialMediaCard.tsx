@@ -26,7 +26,7 @@ const SocialMediaCard: React.FC = () => {
             paddingBottom: "10%",
           }}
         >
-          Social Networks
+          Social Medias
         </Typography>
 
         <Box
