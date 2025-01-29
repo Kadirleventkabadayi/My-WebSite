@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import CategoryCard from "../cards/CategoryCard";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import { useRef } from "react";
@@ -72,6 +72,7 @@ const TopCategories: React.FC = () => {
         padding: "16px",
       }}
     >
+      <Typography variant="h1">Top Categories</Typography>
       <Box
         sx={{
           width: "100%",
