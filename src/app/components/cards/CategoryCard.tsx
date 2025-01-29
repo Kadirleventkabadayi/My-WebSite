@@ -5,9 +5,14 @@ import { Modal, Box } from "@mui/material";
 interface CategoryCardProps {
   image: string;
   title: string;
+  description: string;
 }
 
-const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
+const CategoryCard: React.FC<CategoryCardProps> = ({
+  image,
+  title,
+  description,
+}) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
@@ -88,9 +93,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
           <Typography variant="h6" component="h2">
             {title}
           </Typography>
-          <Typography sx={{ mt: 2 }}>
-            Detailed information about {title}.
-          </Typography>
+          <Typography sx={{ mt: 2 }}>{description}</Typography>
         </Box>
       </Modal>
     </Box>

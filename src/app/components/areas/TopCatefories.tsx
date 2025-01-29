@@ -4,38 +4,7 @@ import { Box, IconButton, Typography } from "@mui/material";
 import CategoryCard from "../cards/CategoryCard";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import { useRef } from "react";
-
-const categories = [
-  {
-    title: "React",
-    image: "/React.png",
-  },
-  {
-    title: "Next",
-    image: "/next.png",
-  },
-  {
-    title: "JavaScript",
-    image: "/JS.png",
-  },
-  {
-    title: "TypeScript",
-    image: "/TS.png",
-  },
-  {
-    title: "Tailwind CSS",
-    image: "/tailwind_css.png",
-  },
-  {
-    title: "Node.js",
-    image: "/Node.png",
-  },
-
-  {
-    title: "Java Spring",
-    image: "/Spring.png",
-  },
-];
+import { technologies } from "@/app/lib/consts";
 
 const TopCategories: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -123,7 +92,7 @@ const TopCategories: React.FC = () => {
           width: "100%",
         }}
       >
-        {categories.map((category, index) => (
+        {technologies.map((category, index) => (
           <Box
             key={index}
             sx={{
@@ -131,7 +100,11 @@ const TopCategories: React.FC = () => {
               width: "15vw",
             }}
           >
-            <CategoryCard image={category.image} title={category.title} />
+            <CategoryCard
+              image={category.image}
+              title={category.title}
+              description={category.description}
+            />
           </Box>
         ))}
       </Box>
