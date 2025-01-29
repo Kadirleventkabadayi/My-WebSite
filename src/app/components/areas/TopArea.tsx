@@ -20,7 +20,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
   );
 
   return (
-    <Box id={id} className="flex flex-col items-center bg-topArea h-screen ">
+    <Box id={id} className="flex flex-col items-center bg-topArea pb-20 ">
       <Typography
         className="pb-20 font-bold text-foreground text-center"
         variant="h2"

@@ -12,13 +12,33 @@
   --footerString1: #171717;
   --footerString2: #3a3939;
 }
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --topArea: #171717;
+  --categoryArea: #1f1f1f;
+  --socialMediaBtn: #1f1f1f;
+  --socialMediaCard: #171717;
+  --footerString1: #ededed;
+  --footerString2: #a7a7a7;
+}
 
+html:not(.dark) {
+  --background: #ffffff;
+  --foreground: #171717;
+  --topArea: #f5f5f5;
+  --categoryArea: #c4d5d8;
+  --socialMediaBtn: #e1e5ec;
+  --socialMediaCard: #f5f5f5;
+  --footerString1: #171717;
+  --footerString2: #3a3939;
+}
 @media (prefers-color-scheme: light) {
   :root {
     --background: #ffffff;
     --foreground: #171717;
     --topArea: #f5f5f5;
-    --categorArea: #c4d5d8;
+    --categoryArea: #c4d5d8;
     --socialMediaBtn: #e1e5ec;
     --socialMediaCard: #f5f5f5;
     --footerString1: #171717;
