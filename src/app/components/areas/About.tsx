@@ -2,7 +2,13 @@ import { Container, Typography, Box, Avatar, Link } from "@mui/material";
 
 function About() {
   return (
-    <Container maxWidth="md" sx={{ minHeight: "90vh" }}>
+    <Container
+      sx={{
+        minHeight: "90vh",
+        width: "100%",
+        m: 0,
+      }}
+    >
       <Box display="flex" flexDirection="column" alignItems="center" mt={5}>
         <Avatar
           alt="Levent"

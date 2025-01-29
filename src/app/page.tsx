@@ -78,7 +78,6 @@ export default function Home() {
               <Box
                 sx={{
                   position: isFlipped ? "absolute" : "relative",
-                  backfaceVisibility: "hidden",
                 }}
               >
                 <TopArea id="TopProjects" repoData={data} />
@@ -99,11 +98,17 @@ export default function Home() {
               <Box
                 sx={{
                   width: "100%",
-                  position: "realtive",
+                  position: !isFlipped ? "absolute" : "relative",
                   transform: "rotateY(180deg)",
                 }}
               >
-                <Box>
+                <Box
+                  sx={{
+                    bgcolor: "var(--categoryArea)",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
                   <About />
                 </Box>
               </Box>

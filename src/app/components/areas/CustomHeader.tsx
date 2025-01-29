@@ -16,7 +16,7 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({
   onFlipChange,
 }) => {
   const [darkMode, setDarkMode] = useState(false);
-  const [isFlipped, setIsFlipped] = useState(isFlippedData);
+  const [, setIsFlipped] = useState(isFlippedData);
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
