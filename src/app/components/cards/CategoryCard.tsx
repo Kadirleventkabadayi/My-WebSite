@@ -32,7 +32,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, title }) => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.76234243697479)3%, rgba(0,0,0,0) 100%)",
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "center",
