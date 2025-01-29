@@ -76,7 +76,7 @@ function TopSelectedCard({
               textAlign: "center",
             }}
           >
-            {title.toUpperCase()}
+            {title.replace("Erciyes-", "").trim().toUpperCase()}
           </Typography>
           <Typography
             variant="body2"
