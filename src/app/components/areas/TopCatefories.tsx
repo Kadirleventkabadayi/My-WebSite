@@ -41,13 +41,17 @@ const TopCategories: React.FC = () => {
       <Box className="w-full flex justify-end items-center py-2 gap-2">
         <IconButton
           onClick={handleScrollLeft}
-          className="bg-white p-2 rounded-full"
+          sx={{
+            bgcolor: "white",
+          }}
         >
           <ArrowBack />
         </IconButton>
         <IconButton
           onClick={handleScrollRight}
-          className="bg-white p-2 rounded-full"
+          sx={{
+            bgcolor: "white",
+          }}
         >
           <ArrowForward />
         </IconButton>
