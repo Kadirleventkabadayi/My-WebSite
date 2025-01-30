@@ -8,6 +8,7 @@ import { fetchGitHubData } from "./lib/utils";
 import { RepoData } from "./lib/types";
 import About from "./components/areas/About";
 import CustomHeader from "./components/areas/CustomHeader";
+import WebSkeleton from "./components/skeletons/WebSkeleton";
 
 export default function Home() {
   const [data, setData] = useState<RepoData[]>([]);
@@ -18,7 +19,7 @@ export default function Home() {
   const url = "repos";
 
   const handleFlipChange = (flip: boolean) => {
-    setIsFlipped(flip); // isFlipped değerini değiştiriyoruz
+    setIsFlipped(flip);
   };
 
   useEffect(() => {
@@ -48,7 +49,16 @@ export default function Home() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <Box id="top" />
+        <CustomHeader
+          isFlippedData={isFlipped}
+          onFlipChange={handleFlipChange}
+        />
+        <WebSkeleton />
+      </>
+    );
   }
 
   if (error) {
@@ -59,6 +69,7 @@ export default function Home() {
     <>
       <Box id="top" />
       <CustomHeader isFlippedData={isFlipped} onFlipChange={handleFlipChange} />
+
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Box
           sx={{
