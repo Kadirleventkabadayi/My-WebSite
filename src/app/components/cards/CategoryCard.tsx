@@ -19,10 +19,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   const handleClose = () => setOpen(false);
 
   return (
-    <Card
-      className="w-[15vw] overflow-hidden select-none"
-      sx={{ position: "relative" }}
-    >
+    <Card className="w-[15vw] overflow-hidden " sx={{ position: "relative" }}>
       <CardMedia
         component="img"
         height="140"
@@ -32,6 +29,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         onClick={handleOpen}
       />
       <Box
+        onClick={handleOpen}
         sx={{
           background: "var(--cardShadow)",
         }}
@@ -60,7 +58,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: 400,
-            bgcolor: "background.paper",
+            bgcolor: "var(--background)",
             boxShadow: 24,
             p: 4,
             borderRadius: 2,
