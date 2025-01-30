@@ -50,4 +50,19 @@ const replaceHyphensWithSpaces = (input: string): string => {
   return input.replace(/-/g, " ");
 };
 
-export { getColorByString, fetchGitHubData, timeAgo, replaceHyphensWithSpaces };
+function checkScreenSize(): boolean {
+  const width = window.innerWidth;
+  if (width <= 1200) {
+    return true;
+  }
+
+  return false;
+}
+
+export {
+  getColorByString,
+  fetchGitHubData,
+  timeAgo,
+  replaceHyphensWithSpaces,
+  checkScreenSize,
+};

@@ -1,9 +1,4 @@
 import {
-  checkScreenSize,
-  replaceHyphensWithSpaces,
-  timeAgo,
-} from "@/app/lib/utils";
-import {
   Avatar,
   Box,
   Card,
@@ -11,14 +6,15 @@ import {
   CardContent,
   CardMedia,
   Divider,
-  SxProps,
-  Theme,
   Typography,
 } from "@mui/material";
-import MobileSelectedCard from "./MobileSelectedCard";
+import {
+  checkScreenSize,
+  replaceHyphensWithSpaces,
+  timeAgo,
+} from "@/app/lib/utils";
 
 interface SelectedCardProps {
-  cardSx?: SxProps<Theme>;
   cardType?: string;
   title: string;
   description: string;
@@ -27,8 +23,7 @@ interface SelectedCardProps {
   imgUrl: string;
 }
 
-const SelectedCard = ({
-  cardSx,
+const MobileSelectedCard = ({
   cardType,
   title,
   description,
@@ -36,50 +31,43 @@ const SelectedCard = ({
   repoUrl,
   imgUrl,
 }: SelectedCardProps) => {
-  if (checkScreenSize()) {
-    return (
-      <MobileSelectedCard
-        cardType={cardType}
-        title={title}
-        description={description}
-        updated_at={updated_at}
-        repoUrl={repoUrl}
-        imgUrl={imgUrl}
-      />
-    );
-  }
   return (
     <Card
       onClick={() => window.open(repoUrl)}
       sx={{
         display: "flex",
-        maxWidth: 700,
-        width: "25vw",
-        minWidth: 360,
-        height: "25vh",
+        flexDirection: checkScreenSize() ? "column" : "row",
+        maxWidth: checkScreenSize() ? "100%" : 700,
+        width: checkScreenSize() ? "100%" : "25vw",
+        minWidth: checkScreenSize() ? "100%" : 360,
+        height: checkScreenSize() ? "auto" : "25vh",
         backgroundColor: "var(--background)",
-        ...cardSx,
       }}
     >
-      <CardActionArea sx={{ display: "flex" }}>
+      <CardActionArea
+        sx={{
+          display: "flex",
+          flexDirection: checkScreenSize() ? "column" : "row",
+        }}
+      >
         <CardMedia
           sx={{
-            height: "25vh",
-            width: "25vh",
+            height: checkScreenSize() ? "auto" : "25vh",
+            width: checkScreenSize() ? "100%" : "25vh",
             p: 1,
             borderRadius: 3,
-            ...cardSx,
           }}
           component="img"
           image={imgUrl}
-          alt="green iguana"
+          alt={title}
         />
         <CardContent
           sx={{
-            height: "24vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
+            height: checkScreenSize() ? "auto" : "24vh",
+            width: checkScreenSize() ? "100%" : "75%",
           }}
         >
           <Typography
@@ -87,13 +75,13 @@ const SelectedCard = ({
             variant="h5"
             component="div"
             sx={{
-              width: "45%",
+              width: checkScreenSize() ? "100%" : "45%",
               backgroundColor: cardType || "orange",
               p: 0.5,
               borderRadius: 1,
               color: "white",
               fontWeight: "bold",
-              fontSize: "0.8rem",
+              fontSize: checkScreenSize() ? "1rem" : "0.8rem",
               textAlign: "center",
             }}
           >
@@ -104,7 +92,7 @@ const SelectedCard = ({
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              height: "60%",
+              height: checkScreenSize() ? "auto" : "60%",
             }}
           >
             <Typography
@@ -115,7 +103,7 @@ const SelectedCard = ({
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 fontWeight: "bold",
-                fontSize: "1.2rem",
+                fontSize: checkScreenSize() ? "1rem" : "1.2rem",
                 mt: 1,
               }}
             >
@@ -155,4 +143,5 @@ const SelectedCard = ({
     </Card>
   );
 };
-export default SelectedCard;
+
+export default MobileSelectedCard;
