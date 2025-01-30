@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import TopSelectedCard from "../cards/TopSelectedCard";
 import { checkScreenSize, getColorByString } from "@/app/lib/utils";
-import SelectedCard from "../cards/SelectedCard";
 import { RepoData } from "@/app/lib/types";
 import { imgList } from "@/app/lib/consts";
 import MobileSelectedCard from "../cards/MobileSelectedCard";
@@ -24,7 +23,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
     <Box id={id} className="flex flex-col items-center bg-topArea pb-20 ">
       <Typography
         className="pb-10 font-bold text-foreground text-center pt-10"
-        variant="h2"
+        variant={checkScreenSize() ? "h4" : "h3"}
       >
         Top Projects
       </Typography>
