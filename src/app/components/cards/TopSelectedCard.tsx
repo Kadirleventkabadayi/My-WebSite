@@ -33,7 +33,7 @@ function TopSelectedCard({
     <Card onClick={() => window.open(repoUrl)} sx={cardSx} className="m-2">
       <CardActionArea className="flex">
         <CardMedia
-          className="w-[60vw] h-[80vh] "
+          sx={{ width: "60vw", height: "80vh" }}
           component="img"
           image="/ai.png"
           alt="Levent"
