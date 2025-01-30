@@ -48,7 +48,7 @@ export default function Home() {
     getGitHubData();
   }, []);
 
-  if (true) {
+  if (loading) {
     return (
       <>
         <Box id="top" />
