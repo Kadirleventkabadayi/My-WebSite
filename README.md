@@ -1,4 +1,4 @@
-# MyBlog
+# My Website
 
 This is my personal blog
 
