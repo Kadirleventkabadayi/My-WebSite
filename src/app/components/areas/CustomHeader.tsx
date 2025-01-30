@@ -5,6 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Box, Switch } from "@mui/material";
 import { useEffect, useState } from "react";
+import { checkScreenSize } from "@/app/lib/utils";
 
 interface CustomHeaderProps {
   isFlippedData: boolean;
@@ -62,30 +63,56 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({
     <AppBar position="sticky" className="bg-royalblue flex items-start">
       <Toolbar className="w-[60%] gap-5 justify-between w-full">
         <Box>
-          <Button
-            className="text-lg font-bold border-b-2 border-white rounded-none"
-            color="inherit"
-            onClick={() => handleClick("top", false)}
-          >
-            Kadir Levent Kabadayı
-          </Button>
-          <Button
-            color="inherit"
-            onClick={() => handleClick("TopProjects", false)}
-          >
-            Top Projects
-          </Button>
-          <Button color="inherit" onClick={() => handleClick("Techs", false)}>
-            Technologies and Frameworks
-          </Button>
-          <Button
-            color="inherit"
-            onClick={() => {
-              handleClick("top", true);
-            }}
-          >
-            About Me
-          </Button>
+          {checkScreenSize() ? (
+            <>
+              <Button
+                className="text-lg font-bold border-b-2 border-white rounded-none"
+                color="inherit"
+                onClick={() => handleClick("top", false)}
+              >
+                Kadir Levent Kabadayı
+              </Button>
+
+              <Button
+                color="inherit"
+                onClick={() => {
+                  handleClick("top", true);
+                }}
+              >
+                About Me
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                className="text-lg font-bold border-b-2 border-white rounded-none"
+                color="inherit"
+                onClick={() => handleClick("top", false)}
+              >
+                Kadir Levent Kabadayı
+              </Button>
+              <Button
+                color="inherit"
+                onClick={() => handleClick("TopProjects", false)}
+              >
+                Top Projects
+              </Button>
+              <Button
+                color="inherit"
+                onClick={() => handleClick("Techs", false)}
+              >
+                Technologies and Frameworks
+              </Button>
+              <Button
+                color="inherit"
+                onClick={() => {
+                  handleClick("top", true);
+                }}
+              >
+                About Me
+              </Button>
+            </>
+          )}
         </Box>
         <Switch
           color="default"

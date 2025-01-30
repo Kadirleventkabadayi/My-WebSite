@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card, CardMedia, Modal, Typography, Divider } from "@mui/material";
 import { Box } from "@mui/system";
+import { checkScreenSize } from "@/app/lib/utils";
 
 interface CategoryCardProps {
   image: string;
@@ -43,7 +44,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
           color="var(--foreground)"
           className="font-bold"
         >
-          {title}
+          {!checkScreenSize() && title}
         </Typography>
         <Divider
           sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
