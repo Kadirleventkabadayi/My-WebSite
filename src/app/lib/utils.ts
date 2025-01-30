@@ -51,11 +51,12 @@ const replaceHyphensWithSpaces = (input: string): string => {
 };
 
 function checkScreenSize(): boolean {
-  const width = window.innerWidth;
-  if (width <= 1200) {
-    return true;
+  if (typeof window !== "undefined") {
+    const width = window.innerWidth;
+    if (width <= 1200) {
+      return true;
+    }
   }
-
   return false;
 }
 
