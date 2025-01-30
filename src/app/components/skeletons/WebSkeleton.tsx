@@ -1,3 +1,4 @@
+import { checkScreenSize } from "@/app/lib/utils";
 import { Box, Skeleton } from "@mui/material";
 
 const WebSkeleton: React.FC = () => {
@@ -11,7 +12,7 @@ const WebSkeleton: React.FC = () => {
           sx={{
             bgcolor: "gray",
             height: "10vh",
-            width: "29vw",
+            width: checkScreenSize() ? "55vw" : "29vw",
             marginBlock: "3vh",
           }}
         />
@@ -23,18 +24,21 @@ const WebSkeleton: React.FC = () => {
             gap: 2,
           }}
         >
-          <Skeleton
-            variant="rectangular"
-            sx={{
-              bgcolor: "gray",
-              height: "80vh",
-              width: "60vw",
-            }}
-          />
+          {!checkScreenSize() && (
+            <Skeleton
+              variant="rectangular"
+              sx={{
+                bgcolor: "gray",
+                height: "80vh",
+                width: "60vw",
+              }}
+            />
+          )}
+
           <Box
             sx={{
               display: "flex",
-              gap: 3,
+              gap: "2.5vh",
               justifyContent: "center",
               flexDirection: "column",
             }}
@@ -45,7 +49,7 @@ const WebSkeleton: React.FC = () => {
                 variant="rectangular"
                 sx={{
                   bgcolor: "gray",
-                  width: "25vw",
+                  width: checkScreenSize() ? "90vw" : "25vw",
                   height: "25vh",
                 }}
               />
