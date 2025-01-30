@@ -48,8 +48,8 @@ const TopCategories: React.FC = () => {
           onClick={handleScrollLeft}
           sx={{
             bgcolor: "white",
-            height: checkScreenSize() ? "24px" : "",
-            width: checkScreenSize() ? "24px" : "",
+            height: checkScreenSize() ? "24px" : "45px",
+            width: checkScreenSize() ? "24px" : "45px",
           }}
         >
           <ArrowBack />
@@ -58,8 +58,8 @@ const TopCategories: React.FC = () => {
           onClick={handleScrollRight}
           sx={{
             bgcolor: "white",
-            height: checkScreenSize() ? "24px" : "",
-            width: checkScreenSize() ? "24px" : "",
+            height: checkScreenSize() ? "24px" : "45px",
+            width: checkScreenSize() ? "24px" : "45px",
           }}
         >
           <ArrowForward />
