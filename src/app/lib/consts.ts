@@ -4,43 +4,55 @@ const technologies = [
     title: "React",
     image: "/React.png",
     description:
-      "React is an open-source JavaScript library for building user interfaces. It allows for the creation of reusable components and facilitates the development of dynamic, high-performance web applications.",
+      "With React, I developed interactive user interfaces for web applications using reusable components and various state management libraries. Here are a few of my projects: Projcet1, Project2, Project3.",
   },
   {
     title: "Next.js",
     image: "/next.png",
     description:
-      "Next.js is a React-based framework that enables server-side rendering (SSR) and static site generation (SSG). It optimizes web performance and is ideal for SEO-friendly and fast-loading web applications.",
+      "With Next.js, I built server-side rendered web applications with optimized performance and SEO. It allowed me to create dynamic pages and static sites with ease. Here are a few of my projects: Projcet1, Project2, Project3.",
   },
   {
     title: "JavaScript",
     image: "/JS.png",
     description:
-      "JavaScript is a dynamic programming language that runs in web browsers. It enables interactivity and dynamic content on web pages and is essential for both frontend and backend web development.",
+      "JavaScript is the my primary programming language for building web applications. I used it to create interactive features, dynamic content, and responsive layouts for various projects. Here are a few of my projects: Projcet1, Project2, Project3.",
   },
   {
     title: "TypeScript",
     image: "/TS.png",
     description:
-      "TypeScript is a superset of JavaScript that adds static typing and object-oriented programming features. It helps developers build large-scale applications with better tooling and error-checking during development.",
+      "TypeScript is the language I prefer nowadays for building scalable and maintainable web applications. It provides static typing, interfaces, and other features that help catch errors early and improve code quality. Here are a few of my projects: Project 1, Project 2, Project 3.",
   },
   {
     title: "Tailwind CSS",
     image: "/tailwind_css.png",
     description:
-      "Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs quickly. It allows for fast styling and easy customization of layouts.",
+      "Tailwind CSS is the utility-first CSS framework I prefer nowadays for style web applications. It allowed me to create custom designs with minimal CSS code and responsive layouts. Here are a few of my projects: Project 1, Project 2, Project 3.",
   },
   {
     title: "Node.js",
     image: "/Node.png",
     description:
-      "Node.js is an open-source runtime environment that allows developers to run JavaScript on the server-side. It's ideal for building scalable and high-performance applications, especially for real-time applications.",
+      "Node.js is a JavaScript runtime environment used for building server-side applications. I used it to create APIs, backend services, and serverless functions for various projects.",
   },
   {
     title: "Java Spring",
     image: "/Spring.png",
     description:
-      "Spring is a Java-based framework used for building enterprise-level web applications. It provides a comprehensive infrastructure for security, data management, and service-oriented architecture.",
+      "Spring is a Java-based framework used for building enterprise applications. I used it to create RESTful APIs,  and web applications with Spring Boot and Spring Cloud. Here are a few of my projects: Project 1, Project 2, Project 3.",
+  },
+  {
+    title: "MongoDB",
+    image: "/mongodb.webp",
+    description:
+      "MongoDB is a NoSQL database used for storing and managing data in web applications. I used it to create document-based databases, perform CRUD operations, and build scalable data models for various projects.",
+  },
+  {
+    title: "Firebase",
+    image: "/firebase.png",
+    description:
+      "Firebase is a platform developed by Google for creating mobile and web applications. I used it to build real-time databases, authentication systems, and cloud functions for various projects.",
   },
 ];
 

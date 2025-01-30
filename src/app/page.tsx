@@ -100,6 +100,7 @@ export default function Home() {
                   width: "100%",
                   position: !isFlipped ? "absolute" : "relative",
                   transform: "rotateY(180deg)",
+                  backfaceVisibility: "hidden",
                 }}
               >
                 <Box
