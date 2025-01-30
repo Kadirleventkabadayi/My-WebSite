@@ -4,6 +4,7 @@ import { checkScreenSize, getColorByString } from "@/app/lib/utils";
 import SelectedCard from "../cards/SelectedCard";
 import { RepoData } from "@/app/lib/types";
 import { imgList } from "@/app/lib/consts";
+import MobileSelectedCard from "../cards/MobileSelectedCard";
 
 interface TopAreaProps {
   id: string;
@@ -34,7 +35,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
         }`}
       >
         {checkScreenSize() ? (
-          <SelectedCard
+          <MobileSelectedCard
             title={erciyesAIContentCreator?.name || ""}
             cardType={getColorByString(erciyesAIContentCreator?.name || "")}
             description={erciyesAIContentCreator?.name || ""}
@@ -60,7 +61,7 @@ function TopArea({ id, repoData }: TopAreaProps) {
           {otherRepoData
             .filter((_, index) => [0, 4, 3].includes(index))
             .map((item, itemIndex) => (
-              <SelectedCard
+              <MobileSelectedCard
                 title={item.name}
                 cardType={getColorByString(item.name)}
                 key={item.name}
@@ -68,7 +69,6 @@ function TopArea({ id, repoData }: TopAreaProps) {
                 updated_at={item.updated_at}
                 repoUrl={item.html_url}
                 imgUrl={imgList[itemIndex]}
-                cardSx={checkScreenSize() ? { mb: 1 } : {}}
               />
             ))}
         </Box>

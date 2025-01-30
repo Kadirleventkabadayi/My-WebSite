@@ -40,8 +40,9 @@ const MobileSelectedCard = ({
         maxWidth: checkScreenSize() ? "100%" : 700,
         width: checkScreenSize() ? "100%" : "25vw",
         minWidth: checkScreenSize() ? "100%" : 360,
-        height: checkScreenSize() ? "auto" : "25vh",
+        height: checkScreenSize() ? "auto" : "26.5vh",
         backgroundColor: "var(--background)",
+        mb: 1,
       }}
     >
       <CardActionArea
@@ -52,8 +53,8 @@ const MobileSelectedCard = ({
       >
         <CardMedia
           sx={{
-            height: checkScreenSize() ? "auto" : "25vh",
-            width: checkScreenSize() ? "100%" : "25vh",
+            height: checkScreenSize() ? "auto" : "26.5vh",
+            width: checkScreenSize() ? "100%" : "26.5vh",
             p: 1,
             borderRadius: 3,
           }}
@@ -65,8 +66,8 @@ const MobileSelectedCard = ({
           sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between",
-            height: checkScreenSize() ? "auto" : "24vh",
+            justifyContent: checkScreenSize() ? "space-between" : "",
+            height: checkScreenSize() ? "auto" : "26vh",
             width: checkScreenSize() ? "100%" : "75%",
           }}
         >
@@ -92,7 +93,7 @@ const MobileSelectedCard = ({
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              height: checkScreenSize() ? "auto" : "60%",
+              height: checkScreenSize() ? "auto" : "80%",
             }}
           >
             <Typography
