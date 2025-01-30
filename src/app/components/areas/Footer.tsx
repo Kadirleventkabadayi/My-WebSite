@@ -23,7 +23,14 @@ const Footer = () => {
         >
           My Website
         </Typography>
-        <Divider className="my-2 border-footerString1 border-solid border-[1px]" />
+        <Divider
+          sx={{
+            marginY: 2,
+            borderColor: "var(--footerString1)",
+            borderStyle: "solid",
+            borderWidth: "1px",
+          }}
+        />
 
         <Box className="flex justify-center mb-2">
           <IconButton
@@ -31,21 +38,21 @@ const Footer = () => {
             target="_blank"
             className="text-footerString1"
           >
-            <GitHub />
+            <GitHub sx={{ color: "var(--footerString1)" }} />
           </IconButton>
           <IconButton
             href="https://www.linkedin.com/in/kadir-levent-kabaday%C4%B1-7b015b25a/"
             target="_blank"
             className="text-footerString1"
           >
-            <LinkedIn />
+            <LinkedIn sx={{ color: "var(--footerString1)" }} />
           </IconButton>
           <IconButton
             href="https://x.com/Prelencos"
             target="_blank"
             className="text-footerString1"
           >
-            <XIcon />
+            <XIcon sx={{ color: "var(--footerString1)" }} />
           </IconButton>
         </Box>
 

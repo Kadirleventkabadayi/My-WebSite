@@ -36,19 +36,33 @@ const SelectedCard = ({
       onClick={() => window.open(repoUrl)}
       sx={{
         maxWidth: 700,
+
         height: "25vh",
         backgroundColor: "var(--background)",
         ...cardSx,
       }}
     >
-      <CardActionArea className="flex">
+      <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
-          className="h-[25vh] w-[25vh] p-2 rounded-lg"
+          sx={{
+            height: "25vh",
+            width: "25vh",
+            p: 1,
+            borderRadius: 3,
+            ...cardSx,
+          }}
           component="img"
           image={imgUrl}
-          alt="image"
+          alt="green iguana"
         />
-        <CardContent className="flex flex-col justify-between h-[24vh]">
+        <CardContent
+          sx={{
+            height: "24vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
           <Typography
             gutterBottom
             variant="h5"
@@ -66,28 +80,53 @@ const SelectedCard = ({
           >
             {replaceHyphensWithSpaces(title.toUpperCase())}
           </Typography>
-          <Box className="flex flex-col justify-between h-[60%]">
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              height: "60%",
+            }}
+          >
             <Typography
               variant="body2"
-              className="h-[40%] text-foreground overflow-hidden text-ellipsis font-bold text-xl mt-1"
+              sx={{
+                height: "40%",
+                color: "var(--foreground)",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                fontWeight: "bold",
+                fontSize: "1.2rem",
+                mt: 1,
+              }}
             >
               {description} project
             </Typography>
 
-            <Box className="flex items-center mt-auto">
+            <Box
+              sx={{ display: "flex", alignItems: "center", marginTop: "auto" }}
+            >
               <Avatar
-                className="w-6 h-6 mr-2"
+                sx={{ width: 24, height: 24, marginRight: 1 }}
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
               />
-              <Typography variant="body2" className="font-bold text-foreground">
+              <Typography
+                variant="body2"
+                color="var(--foreground)"
+                sx={{ fontWeight: "bold" }}
+              >
                 Kadir Levent
               </Typography>
               <Divider
-                className="mx-2 text-foreground border-foreground"
+                sx={{ marginInline: 1, borderColor: "var(--foreground)" }}
                 orientation="vertical"
                 flexItem
               />
-              <Typography variant="body2" className="font-bold text-gray-500">
+              <Typography
+                variant="body2"
+                color="var(--foreground)"
+                sx={{ fontWeight: "bold", color: "gray" }}
+              >
                 {timeAgo(updated_at)}
               </Typography>
             </Box>
@@ -97,5 +136,4 @@ const SelectedCard = ({
     </Card>
   );
 };
-
 export default SelectedCard;

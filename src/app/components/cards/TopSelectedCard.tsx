@@ -30,15 +30,38 @@ function TopSelectedCard({
   repoUrl,
 }: TopSelectedCardProps) {
   return (
-    <Card onClick={() => window.open(repoUrl)} sx={cardSx} className="m-2">
-      <CardActionArea className="flex">
+    <Card
+      onClick={() => window.open(repoUrl)}
+      sx={{
+        m: 2,
+        ...cardSx,
+      }}
+    >
+      <CardActionArea sx={{ display: "flex" }}>
         <CardMedia
-          sx={{ width: "60vw", height: "80vh" }}
+          sx={{
+            width: "60vw",
+            height: "80vh",
+            borderRadius: 1,
+          }}
           component="img"
           image="/ai.png"
           alt="Levent"
         />
-        <CardContent className="absolute w-full h-full p-2 flex flex-col justify-end bg-gradient-to-t from-black via-black/60 to-transparent">
+
+        <CardContent
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6446953781512605) 23%, rgba(0,0,0,0.15730042016806722) 47%, rgba(0,0,0,0.04805672268907568) 74%, rgba(0,0,0,0) 100%)",
+            padding: 2,
+            justifyContent: "flex-end",
+          }}
+        >
           <Typography
             gutterBottom
             variant="h5"
@@ -60,25 +83,40 @@ function TopSelectedCard({
           </Typography>
           <Typography
             variant="body2"
-            className="overflow-hidden text-ellipsis text-white font-bold text-xl mt-1"
+            sx={{
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "1.2rem",
+              mt: 1,
+            }}
           >
             {description}
           </Typography>
 
-          <Box className="flex items-center">
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <Avatar
-              className="w-6 h-6 mr-2"
+              sx={{ width: 24, height: 24, marginRight: 1 }}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
             />
-            <Typography variant="body2" className="text-white font-bold">
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ color: "white", fontWeight: "bold" }}
+            >
               Kadir Levent
             </Typography>
             <Divider
-              className="mx-2 text-white border-white"
+              sx={{ marginInline: 1, color: "white", borderColor: "white" }}
               orientation="vertical"
               flexItem
             />
-            <Typography variant="body2" className="text-white font-bold">
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ color: "white", fontWeight: "bold" }}
+            >
               {timeAgo(updated_at)}
             </Typography>
           </Box>
