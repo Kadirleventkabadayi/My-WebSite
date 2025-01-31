@@ -36,7 +36,11 @@ function About() {
         </Typography>
         <Typography variant="body1" paragraph>
           I had the opportunity to work as an intern software engineer at{" "}
-          <Link href="/" color="primary">
+          <Link
+            target="_blank"
+            href="https://bilgem.tubitak.gov.tr/yte/"
+            color="primary"
+          >
             TÜBİTAK BİLGEM
           </Link>
           , where I contributed to building advanced systems and learned a great
