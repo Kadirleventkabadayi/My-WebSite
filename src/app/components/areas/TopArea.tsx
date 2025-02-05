@@ -15,10 +15,12 @@ function TopArea({ id, repoData }: TopAreaProps) {
     (item: RepoData) => item.name === "Erciyes-AI-Content-Creator"
   );
 
-  const otherRepoData = repoData?.filter(
-    (item: RepoData) => item.name !== "Erciyes-AI-Content-Creator"
+  const otherRepoData = repoData.filter(
+    (item: RepoData) =>
+      item.name === "admin-dashboard" ||
+      item.name == "My-WebSite" ||
+      item.name == "my-library"
   );
-
   return (
     <Box id={id} className="flex flex-col items-center bg-topArea pb-20 ">
       <Typography
@@ -57,19 +59,17 @@ function TopArea({ id, repoData }: TopAreaProps) {
             checkScreenSize() ? "" : "h-[80vh]"
           }  `}
         >
-          {otherRepoData
-            .filter((_, index) => [0, 4, 3].includes(index))
-            .map((item, itemIndex) => (
-              <MobileSelectedCard
-                title={item.name}
-                cardType={getColorByString(item.name)}
-                key={item.name}
-                description={item.name}
-                updated_at={item.updated_at}
-                repoUrl={item.html_url}
-                imgUrl={imgList[itemIndex]}
-              />
-            ))}
+          {otherRepoData.map((item, itemIndex) => (
+            <MobileSelectedCard
+              title={item.name}
+              cardType={getColorByString(item.name)}
+              key={item.name}
+              description={item.name}
+              updated_at={item.updated_at}
+              repoUrl={item.html_url}
+              imgUrl={imgList[itemIndex]}
+            />
+          ))}
         </Box>
       </Box>
     </Box>
