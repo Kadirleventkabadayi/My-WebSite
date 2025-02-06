@@ -77,7 +77,7 @@ const TopCategories: React.FC = () => {
         {technologies.map((category, index) => (
           <Box
             key={index}
-            className={!checkScreenSize() ? `flex-none w-[15vw]` : ""}
+            className={!checkScreenSize() ? `flex-none w-[15vw] h-[15vw]` : ""}
           >
             <CategoryCard
               image={category.image}
