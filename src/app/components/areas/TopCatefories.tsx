@@ -39,32 +39,32 @@ const TopCategories: React.FC = () => {
         Technologies and Frameworks
       </Typography>
 
-      <Box
-        className={`w-full flex ${
-          checkScreenSize() ? "justify-center" : "justify-end"
-        } </Box> items-center py-2 gap-2`}
-      >
-        <IconButton
-          onClick={handleScrollLeft}
-          sx={{
-            bgcolor: "white",
-            height: checkScreenSize() ? "24px" : "45px",
-            width: checkScreenSize() ? "24px" : "45px",
-          }}
+      {!checkScreenSize() && (
+        <Box
+          className={`w-full flex justify-end </Box> items-center py-2 gap-2`}
         >
-          <ArrowBack />
-        </IconButton>
-        <IconButton
-          onClick={handleScrollRight}
-          sx={{
-            bgcolor: "white",
-            height: checkScreenSize() ? "24px" : "45px",
-            width: checkScreenSize() ? "24px" : "45px",
-          }}
-        >
-          <ArrowForward />
-        </IconButton>
-      </Box>
+          <IconButton
+            onClick={handleScrollLeft}
+            sx={{
+              bgcolor: "white",
+              height: "45px",
+              width: "45px",
+            }}
+          >
+            <ArrowBack />
+          </IconButton>
+          <IconButton
+            onClick={handleScrollRight}
+            sx={{
+              bgcolor: "white",
+              height: "45px",
+              width: "45px",
+            }}
+          >
+            <ArrowForward />
+          </IconButton>
+        </Box>
+      )}
 
       <Box
         ref={scrollContainerRef}

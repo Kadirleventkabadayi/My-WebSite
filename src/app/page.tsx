@@ -104,7 +104,9 @@ export default function Home() {
                 >
                   <TopCategories />
                 </Box>
-                <CardArea />
+                <Box sx={{ pt: "5%", background: "var(--topArea)" }}>
+                  <CardArea />
+                </Box>
               </Box>
             )}
 
