@@ -76,7 +76,7 @@ const MobileSelectedCard = ({
             variant="h5"
             component="div"
             sx={{
-              width: checkScreenSize() ? "100%" : "45%",
+              width: "100%",
               backgroundColor: cardType || "orange",
               p: 0.5,
               borderRadius: 1,
