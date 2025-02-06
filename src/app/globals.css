@@ -120,12 +120,6 @@ body {
   height: 100%;
 }
 
-@media (max-width: 768px) {
-  .main-content {
-    top: 70%;
-  }
-}
-
 .logo {
   width: 150px;
   height: 150px;
@@ -184,6 +178,34 @@ body {
   color: var(--background);
   transform: translateY(25px);
 }
+
+@media (max-width: 480px) {
+  .main-content {
+    top: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .copy {
+    margin: 1em 0;
+  }
+
+  .line p {
+    font-size: 18px;
+  }
+
+  .myBtn {
+    padding: 0.7em 1.4em;
+    font-size: 14px;
+    transform: translateY(15px);
+  }
+}
+
 .row {
   position: relative;
   width: 100vw;
@@ -203,7 +225,19 @@ body {
 }
 
 .card-image {
-  width: 100%;
+  width: 400%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width: 480px) {
+  .main {
+    height: 75vh;
+  }
+  .card {
+    width: 40%;
+    height: 180px;
+  }
+  .card-image {
+    object-fit: fill;
+  }
 }
