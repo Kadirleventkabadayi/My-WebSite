@@ -171,39 +171,13 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 10;
+  margin-top: 2em;
 }
 
 .myBtn:hover {
   background-color: var(--foreground);
   color: var(--background);
   transform: translateY(25px);
-}
-
-@media (max-width: 480px) {
-  .main-content {
-    top: 70%;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
-
-  .copy {
-    margin: 1em 0;
-  }
-
-  .line p {
-    font-size: 18px;
-  }
-
-  .myBtn {
-    padding: 0.7em 1.4em;
-    font-size: 14px;
-    transform: translateY(15px);
-  }
 }
 
 .row {
@@ -229,15 +203,55 @@ body {
   height: 100%;
   object-fit: cover;
 }
-@media (max-width: 480px) {
-  .main {
-    height: 75vh;
-  }
-  .card {
-    width: 40%;
-    height: 180px;
-  }
-  .card-image {
-    object-fit: fill;
-  }
+
+.main2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.logo2 {
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--foreground);
+  border-radius: 100%;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.copy2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.line2 {
+  width: max-content;
+  margin-bottom: 2em;
+}
+
+.line2 p {
+  font-size: 18px;
+}
+
+.myBtn2 {
+  padding: 1em 2em;
+  font-size: 16px;
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+  border-radius: 8em;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.myBtn2:hover {
+  background-color: var(--foreground);
+  color: var(--background);
 }

@@ -74,7 +74,7 @@ const Footer = () => {
           className="mt-2 text-footerString2"
         >
           {"Copyright © "}
-          <Link href="/">My Website</Link> {new Date().getFullYear()}
+          <Link href="/">Kadir Levent Kabadayı</Link> {new Date().getFullYear()}
           {"."}
         </Typography>
       </Container>
