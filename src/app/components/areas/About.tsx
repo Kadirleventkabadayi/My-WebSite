@@ -12,7 +12,7 @@ function About() {
       <Box display="flex" flexDirection="column" alignItems="center" mt={5}>
         <Avatar
           alt="Levent"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
+          src="/newpp.png"
           sx={{
             width: 120,
             height: 120,

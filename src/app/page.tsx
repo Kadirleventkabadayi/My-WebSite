@@ -9,6 +9,8 @@ import { RepoData } from "./lib/types";
 import About from "./components/areas/About";
 import CustomHeader from "./components/areas/CustomHeader";
 import WebSkeleton from "./components/skeletons/WebSkeleton";
+import CardArea from "./components/areas/CardArea";
+import ReactLenis from "lenis/react";
 
 export default function Home() {
   const [data, setData] = useState<RepoData[]>([]);
@@ -66,7 +68,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <ReactLenis root>
       <Box id="top" />
       <CustomHeader isFlippedData={isFlipped} onFlipChange={handleFlipChange} />
 
@@ -102,6 +104,7 @@ export default function Home() {
                 >
                   <TopCategories />
                 </Box>
+                <CardArea />
               </Box>
             )}
 
@@ -128,6 +131,6 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
-    </>
+    </ReactLenis>
   );
 }
