@@ -20,7 +20,12 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   const handleClose = () => setOpen(false);
 
   return (
-    <Card className="w-[15vw] overflow-hidden " sx={{ position: "relative" }}>
+    <Card
+      className={`w-[15vh] overflow-hidden ${
+        checkScreenSize() && "h-[15vh] m-2"
+      }`}
+      sx={{ position: "relative" }}
+    >
       <CardMedia
         component="img"
         height="140"
@@ -32,23 +37,27 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
       <Box
         onClick={handleOpen}
         sx={{
-          background: "var(--cardShadow)",
+          background: !checkScreenSize() ? "var(--cardShadow)" : "",
         }}
         className="absolute top-0 left-0 right-0 bottom-0 flex items-end justify-center p-4"
       >
-        <Divider
-          sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
-        />
-        <Typography
-          variant="h5"
-          color="var(--foreground)"
-          className="font-bold"
-        >
-          {!checkScreenSize() && title}
-        </Typography>
-        <Divider
-          sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
-        />
+        {!checkScreenSize() && (
+          <>
+            <Divider
+              sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
+            />
+            <Typography
+              variant="h5"
+              color="var(--foreground)"
+              className="font-bold"
+            >
+              {title}
+            </Typography>
+            <Divider
+              sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
+            />
+          </>
+        )}
       </Box>
 
       <Modal open={open} onClose={handleClose}>
