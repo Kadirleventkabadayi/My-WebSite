@@ -86,10 +86,7 @@ html:not(.dark) {
   --footerString2: #3a3939;
   --cardShadow: linear-gradient(
     0deg,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0.6446953781512605) 23%,
-    rgba(255, 255, 255, 0.15730042016806722) 47%,
-    rgba(255, 255, 255, 0.04805672268907568) 74%,
+    rgb(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 0) 100%
   );
 }
@@ -102,4 +99,145 @@ body {
 
 .top-area {
   background: var(--topArea);
+}
+
+.main {
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--topArea);
+}
+
+.main-content {
+  position: relative;
+  top: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--foreground);
+  border-radius: 100%;
+  overflow: hidden;
+  transform: scale(0);
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.copy {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  position: relative;
+  margin: 0.5em 0;
+  width: max-content;
+  height: 32px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.line p {
+  position: relative;
+  font-size: 24px;
+  transform: translateY(30px);
+}
+
+.myBtn {
+  position: relative;
+  padding: 1em 2em;
+  font-size: 18px;
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+  border-radius: 8em;
+  background: none;
+  outline: none;
+  transform: translateY(30px);
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.myBtn:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+  transform: translateY(25px);
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    top: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .copy {
+    margin: 1em 0;
+  }
+
+  .line p {
+    font-size: 18px;
+  }
+
+  .myBtn {
+    padding: 0.7em 1.4em;
+    font-size: 14px;
+    transform: translateY(15px);
+  }
+}
+
+.row {
+  position: relative;
+  width: 100vw;
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.card {
+  position: relative;
+  width: 40%;
+  height: 360px;
+  border-radius: 0.75em;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.card-image {
+  width: 400%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 480px) {
+  .main {
+    height: 75vh;
+  }
+  .card {
+    width: 40%;
+    height: 180px;
+  }
+  .card-image {
+    object-fit: fill;
+  }
 }

@@ -13,15 +13,19 @@ import XIcon from "@mui/icons-material/X";
 
 const Footer = () => {
   return (
-    <Box component="footer" className="py-4 px-2 mt-auto bg-topArea ">
+    <Box
+      component="footer"
+      className="py-4 px-2 mt-auto bg-topArea"
+      sx={{ borderTop: "1px solid var(--footerString1)" }}
+    >
       <Container maxWidth="sm">
         <Typography
           variant="h6"
           align="center"
           gutterBottom
-          className="font-bold text-footerString1"
+          className="font-bold text-footerString1 mt-2"
         >
-          My Website
+          Kadir Levent Kabadayı
         </Typography>
         <Divider
           sx={{
@@ -54,15 +58,6 @@ const Footer = () => {
           >
             <XIcon sx={{ color: "var(--footerString1)" }} />
           </IconButton>
-        </Box>
-
-        <Box className="flex justify-center mb-2">
-          <Link
-            href="mailto:kadirleventkabadayi@gmail.com"
-            className="text-footerString2 mx-2"
-          >
-            Contact
-          </Link>
         </Box>
 
         <Typography
