@@ -31,7 +31,7 @@ const TopCategories: React.FC = () => {
   };
 
   return (
-    <Box className="relative max-w-[67vw] flex flex-col items-center p-4">
+    <Box className={`relative max-w-[67vw] flex flex-col items-center p-4 `}>
       <Typography
         className="pt-5 font-bold text-foreground text-center"
         variant={checkScreenSize() ? "h5" : "h4"}
@@ -75,7 +75,10 @@ const TopCategories: React.FC = () => {
         className="overflow-x-auto scroll-smooth w-full flex gap-3 p-4"
       >
         {technologies.map((category, index) => (
-          <Box key={index} className="flex-none w-[15vw]">
+          <Box
+            key={index}
+            className={!checkScreenSize() ? `flex-none w-[15vw]` : ""}
+          >
             <CategoryCard
               image={category.image}
               title={category.title}
