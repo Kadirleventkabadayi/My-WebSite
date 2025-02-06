@@ -21,8 +21,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 
   return (
     <Card
-      className={`w-[15vh] overflow-hidden ${
-        checkScreenSize() && "h-[15vh] m-2"
+      className={`w-[15vw] overflow-hidden ${
+        checkScreenSize() && "w-[15vh] h-[15vh] m-2"
       }`}
       sx={{ position: "relative" }}
     >
