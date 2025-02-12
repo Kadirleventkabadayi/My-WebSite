@@ -19,6 +19,8 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const [flipCahnged, setFlipChanged] = useState<boolean>(false);
+  const [renderAfterOneSecond, setRenderAfterOneSecond] =
+    useState<boolean>(false);
   const username = "kadirleventkabadayi";
   const url = "repos";
 
@@ -28,7 +30,10 @@ export default function Home() {
     setIsFlipped(flip);
     const previousFlip = prevFlipRef.current;
     if (previousFlip !== flip) {
-      console.log("prevFlipRef.current", prevFlipRef.current, "flip", flip);
+      setTimeout(() => {
+        setRenderAfterOneSecond(flip);
+      }, 1000);
+
       setFlipChanged(true);
       setTimeout(() => {
         setFlipChanged(false);
@@ -94,10 +99,10 @@ export default function Home() {
           }}
         >
           <Box>
-            {!isFlipped && (
+            {!renderAfterOneSecond && (
               <Box
                 sx={{
-                  position: isFlipped ? "absolute" : "relative",
+                  position: renderAfterOneSecond ? "absolute" : "relative",
                 }}
               >
                 <TopArea id="TopProjects" repoData={data} />
@@ -117,11 +122,11 @@ export default function Home() {
               </Box>
             )}
 
-            {isFlipped && (
+            {renderAfterOneSecond && (
               <Box
                 sx={{
                   width: "100%",
-                  position: !isFlipped ? "absolute" : "relative",
+                  position: !renderAfterOneSecond ? "absolute" : "relative",
                 }}
               >
                 <Box
