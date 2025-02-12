@@ -21,7 +21,6 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
-    onFlipChange(false);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -60,7 +59,7 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({
   };
 
   return (
-    <AppBar position="sticky" className="bg-royalblue flex items-start">
+    <AppBar position="sticky" className="bg-royalblue flex items-start z-10">
       <Toolbar className="w-[60%] gap-5 justify-between w-full">
         <Box>
           {checkScreenSize() ? (

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Box } from "@mui/material";
 import TopArea from "./components/areas/TopArea";
 import TopCategories from "./components/areas/TopCatefories";
@@ -11,17 +11,30 @@ import CustomHeader from "./components/areas/CustomHeader";
 import WebSkeleton from "./components/skeletons/WebSkeleton";
 import CardArea from "./components/areas/CardArea";
 import ReactLenis from "lenis/react";
+import NextPageAnim from "./components/areas/NextPageAnim";
 
 export default function Home() {
   const [data, setData] = useState<RepoData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
+  const [flipCahnged, setFlipChanged] = useState<boolean>(false);
   const username = "kadirleventkabadayi";
   const url = "repos";
 
+  const prevFlipRef = useRef(isFlipped);
+
   const handleFlipChange = (flip: boolean) => {
     setIsFlipped(flip);
+    const previousFlip = prevFlipRef.current;
+    if (previousFlip !== flip) {
+      console.log("prevFlipRef.current", prevFlipRef.current, "flip", flip);
+      setFlipChanged(true);
+      setTimeout(() => {
+        setFlipChanged(false);
+      }, 2000);
+    }
+    prevFlipRef.current = flip;
   };
 
   useEffect(() => {
@@ -69,6 +82,8 @@ export default function Home() {
 
   return (
     <ReactLenis root>
+      {flipCahnged && <NextPageAnim />}
+
       <Box id="top" />
       <CustomHeader isFlippedData={isFlipped} onFlipChange={handleFlipChange} />
 
@@ -76,17 +91,9 @@ export default function Home() {
         <Box
           sx={{
             width: "100%",
-            perspective: "1000px",
           }}
         >
-          <Box
-            sx={{
-              perspective: "1000px",
-              transformStyle: "preserve-3d",
-              transform: isFlipped ? "rotateY(180deg)" : "none",
-              transition: "transform 0.5s",
-            }}
-          >
+          <Box>
             {!isFlipped && (
               <Box
                 sx={{
@@ -115,8 +122,6 @@ export default function Home() {
                 sx={{
                   width: "100%",
                   position: !isFlipped ? "absolute" : "relative",
-                  transform: "rotateY(180deg)",
-                  backfaceVisibility: "hidden",
                 }}
               >
                 <Box
