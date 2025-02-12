@@ -119,6 +119,17 @@ body {
   align-items: center;
   height: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .main-content {
+    top: 75%;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .main-content {
+    top: 50%;
+  }
+}
 
 .logo {
   width: 150px;
