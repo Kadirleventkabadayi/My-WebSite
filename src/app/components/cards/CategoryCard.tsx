@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, CardMedia, Modal, Typography, Divider } from "@mui/material";
+import { Card, CardMedia, Modal, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { checkScreenSize } from "@/app/lib/utils";
 
