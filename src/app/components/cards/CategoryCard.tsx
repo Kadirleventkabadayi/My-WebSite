@@ -39,28 +39,10 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
       <Box
         onClick={handleOpen}
         sx={{
-          background: !checkScreenSize() ? "var(--cardShadow)" : "",
+          background: !checkScreenSize() ? "" : "",
         }}
         className="absolute top-0 left-0 right-0 bottom-0 flex items-end justify-center p-4"
-      >
-        {!checkScreenSize() && (
-          <>
-            <Divider
-              sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
-            />
-            <Typography
-              variant="h5"
-              color="var(--foreground)"
-              className="font-bold"
-            >
-              {title}
-            </Typography>
-            <Divider
-              sx={{ width: "10%", borderColor: "var(--foreground)", mb: 2 }}
-            />
-          </>
-        )}
-      </Box>
+      ></Box>
 
       <Modal open={open} onClose={handleClose}>
         <Box
