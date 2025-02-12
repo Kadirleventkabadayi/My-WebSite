@@ -40,9 +40,7 @@ const TopCategories: React.FC = () => {
       </Typography>
 
       {!checkScreenSize() && (
-        <Box
-          className={`w-full flex justify-end </Box> items-center py-2 gap-2`}
-        >
+        <Box className={`w-full flex justify-end  items-center py-2 gap-2`}>
           <IconButton
             onClick={handleScrollLeft}
             sx={{
