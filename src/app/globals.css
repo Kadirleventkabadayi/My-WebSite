@@ -142,17 +142,34 @@ body {
   .main {
     height: 85vh;
   }
+  .main-content {
+    top: 60%;
+  }
+}
+@media screen and (max-height: 1080px) {
+  .main {
+    height: 130vh;
+  }
+  .main-content {
+    top: 60%;
+  }
 }
 
 @media screen and (max-height: 1024px) {
   .main {
     height: 120vh;
   }
+  .main-content {
+    top: 60%;
+  }
 }
 
 @media screen and (max-height: 768px) {
   .main {
     height: 150vh;
+  }
+  .main-content {
+    top: 60%;
   }
 }
 
