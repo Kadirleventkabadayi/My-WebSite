@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { Box, Card, CardContent, Modal, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Modal,
+  Typography,
+} from "@mui/material";
 import { checkScreenSize } from "@/app/lib/utils";
 
 interface CategoryCardProps {
@@ -82,11 +89,18 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
     });
   }, []);
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => {
+    if (!open) {
+      setOpen(true);
+    }
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Card
+      onClick={handleOpen}
       ref={cardRef}
       className={`${
         checkScreenSize() ? "w-[15vh] h-[15vh] m-2" : "w-[15vw] h-[15vw]"
@@ -95,18 +109,23 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         backgroundImage: `url(${image})`,
         backgroundRepeat: "no-repeat",
       }}
-      onClick={handleOpen}
     >
       {checkScreenSize() ? (
-        <Modal open={open} onClose={handleClose}>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Box
             sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "100vw",
               bgcolor: "var(--background)",
+              width: "80vw",
               boxShadow: 24,
               p: 4,
               borderRadius: 2,
