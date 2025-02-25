@@ -17,8 +17,7 @@ export const metadata: Metadata = {
   title: "Kadir Levent Kabadayı",
   description: "Kadir Levent Kabadayı's personal website",
   openGraph: {
-    images:
-      "https://og-image-wheat.vercel.app/api/og?title=Kadir+Levent+Kabaday%C4%B1&description=Kadir+Levent+Kabaday%C4%B1%27s+personal+website&logoUrl=https%3A%2F%2Fraw.githubusercontent.com%2FKadirleventkabadayi%2FMy-WebSite%2Frefs%2Fheads%2Fmain%2Fpublic%2Fnewpp.png",
+    images: "/metaimg.png",
   },
 };
 
