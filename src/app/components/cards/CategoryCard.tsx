@@ -1,13 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Modal,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, Modal, Typography } from "@mui/material";
 import { checkScreenSize } from "@/app/lib/utils";
 
 interface CategoryCardProps {
