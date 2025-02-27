@@ -6,7 +6,6 @@ function Sus() {
   const ballRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
-    // GSAP animations for moving the ball
     const xTo = gsap.quickTo(ballRef.current!, "x", {
       duration: 0.6,
       ease: "power3",
@@ -16,16 +15,13 @@ function Sus() {
       ease: "power3",
     });
 
-    // Mouse move event listener
     const handleMouseMove = (e: MouseEvent) => {
       xTo(e.clientX);
       yTo(e.clientY + 20);
     };
 
-    // Adding the mousemove listener
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Cleanup function to remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
