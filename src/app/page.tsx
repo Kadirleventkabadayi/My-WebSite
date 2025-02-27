@@ -12,6 +12,7 @@ import WebSkeleton from "./components/skeletons/WebSkeleton";
 import CardArea from "./components/areas/CardArea";
 import ReactLenis from "lenis/react";
 import NextPageAnim from "./components/areas/NextPageAnim";
+import Sus from "./components/Sus";
 
 export default function Home() {
   const [data, setData] = useState<RepoData[]>([]);
@@ -143,6 +144,7 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
+      <Sus />
     </ReactLenis>
   );
 }

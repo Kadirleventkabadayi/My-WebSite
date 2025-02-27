@@ -35,6 +35,7 @@ function TopSelectedCard({
       sx={{
         m: 2,
         ...cardSx,
+        zIndex: 100,
       }}
     >
       <CardActionArea sx={{ display: "flex" }}>

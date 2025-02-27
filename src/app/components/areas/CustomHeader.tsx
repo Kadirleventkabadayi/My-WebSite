@@ -59,7 +59,7 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({
   };
 
   return (
-    <AppBar position="sticky" className="bg-royalblue flex items-start z-10">
+    <AppBar position="sticky" className="bg-royalblue flex items-start z-100">
       <Toolbar className="w-[60%] gap-5 justify-between w-full">
         <Box>
           {checkScreenSize() ? (
