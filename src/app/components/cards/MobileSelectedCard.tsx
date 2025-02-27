@@ -43,6 +43,7 @@ const MobileSelectedCard = ({
         height: checkScreenSize() ? "auto" : "26.5vh",
         backgroundColor: "var(--background)",
         mb: 1,
+        zIndex: 100,
       }}
     >
       <CardActionArea
