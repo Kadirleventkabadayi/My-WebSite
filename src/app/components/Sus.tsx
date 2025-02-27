@@ -16,8 +16,8 @@ function Sus() {
     });
 
     const handleMouseMove = (e: MouseEvent) => {
-      xTo(e.clientX);
-      yTo(e.clientY + 20);
+      xTo(e.clientX - 20);
+      yTo(e.clientY + 25);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
