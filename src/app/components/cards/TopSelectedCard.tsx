@@ -98,7 +98,7 @@ function TopSelectedCard({
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Avatar
               sx={{ width: 24, height: 24, marginRight: 1 }}
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ9y6VvHr6HIPDQ1K8uwe_0qDH20HqHxloTg&s"
+              src="https://avatars.githubusercontent.com/u/120386410?v=4"
             />
             <Typography
               variant="body2"
